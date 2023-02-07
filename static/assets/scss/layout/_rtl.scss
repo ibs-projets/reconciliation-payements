@@ -1,0 +1,319 @@
+
+/* ###### Rtl  ###### */
+.rtl{
+	.select2-results,.select2-container{
+	  direction: rtl;
+     text-align: start ;
+   }
+   .select2-container .select2-dropdown{
+	  direction: ltr !important;
+   }
+   [dir=rtl] .tooltip.show {
+    direction: ltr;
+  }
+  .sp-container{
+    direction: ltr;
+  }
+   [type=email], [type=number], [type=tel], [type=url]{
+    direction: rtl;
+   }
+  .demo_changer .form_holder {
+    // border-radius:0 10px 10px 0;
+  }
+  .carousel-control-next {
+    transform: rotate(180deg);
+  }
+  .carousel-control-prev {
+    transform: rotate(180deg);
+  }
+	.slider-wrap {
+		.thumb-carousel-control-next {
+			transform: rotate(180deg) translateY(50%) !important;
+		}
+		.thumb-carousel-control-prev {
+			transform: rotate(180deg) translateY(50%) !important;
+		}
+	}
+  .ui-datepicker .ui-datepicker-header .ui-datepicker-next:before {
+    content: "\f104";
+   }
+   .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:before {
+     content: "\f105";
+    }
+    .fc-icon-chevron-right:before {
+      content: "\e901";
+    }
+    .fc-icon-chevron-left:before {
+      content: "\e900";
+    }
+    .lg-actions .lg-next:before {
+      content: "\e094" !important;
+    }
+    .lg-actions .lg-prev:after {
+      content: "\e095" !important;
+  }
+  @media (min-width: 564px){
+    .daterangepicker.ltr {
+        direction: rtl;
+        text-align: start;
+        right: 70rem !important;
+    }
+  }
+    .lg-actions .lg-next:before {
+      content: "\e92e";
+    }
+    .lg-actions .lg-prev:after {
+      content: "\e92f";
+    }
+    .sweet-alert .sa-icon.sa-success .sa-line.sa-tip {
+      // -webkit-transform: rotate(300deg);
+      // transform: rotate(300deg);
+    }
+    .sweet-alert .sa-icon.sa-success .sa-line.sa-tip {
+        width: 25px;
+        left: 14px;
+        top: 46px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        inset-inline-start: inherit;
+    }
+    .sweet-alert .sa-icon.sa-success .sa-line.sa-long {
+      // -webkit-transform: rotate(45deg);
+      // transform: rotate(45deg);
+    }
+    .sweet-alert .sa-icon.sa-success .sa-line.sa-long {
+
+      width: 47px;
+      right: 8px;
+      top: 38px;
+      inset-inline-end:inherit;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    } 
+  .tooltip.tooltip-left .tooltip-inner:before, .tooltip.bs-tether-element-attached-right .tooltip-inner:before {
+    border-width: 5px 5px 5px 0;
+    border-inline-end-color: $black;
+  }
+  .tooltip.tooltip-right .tooltip-inner:before, .tooltip.bs-tether-element-attached-left .tooltip-inner:before {
+      border-width: 5px 0 5px 5px;
+      border-inline-start-color: $black;
+    }
+    .btn-group-toolbar .btn-group:first-child .btn:first-child {
+      border-radius:0 5px  5px 0;
+    }
+    .btn-group-toolbar .btn-group:last-child .btn:last-child {
+      border-radius: 5px 0 0 5px;
+  }
+  .slick-next:before {
+    content: "\e92e";
+  }
+   .slick-prev:before {
+      content: "\e92f";
+  }
+    .ion-ios-arrow-forward:before {
+      content: "";
+  }
+    .ion-ios-arrow-back:before {
+      content: "";
+  }
+  
+  .was-validated .form-control:valid, .form-control.is-valid, input.form-control.parsley-success, textarea.form-control.parsley-success {
+    background-position: center left calc(0.375em + 0.1875rem);
+   }
+   .was-validated .form-control:invalid, .form-control.is-invalid, input.form-control.parsley-error, textarea.form-control.parsley-error {
+   background-position: center left calc(0.375em + 0.1875rem);
+   }
+   .card-img-absolute {
+     margin-inline-start: -27px;
+   }
+   .apexcharts-yaxis.apexcharts-xaxis-inversed{
+     direction: initial;
+   }
+    
+   .irs{
+     direction: ltr;
+   }
+   
+	#tooltip-right-arrow-individual {
+		inset-inline-end: 0px !important;
+    inset-inline-start: auto !important;
+	}
+	.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow, .bs-tooltip-end .tooltip-arrow {
+		inset-inline-end: 0;
+		inset-inline-start: auto;
+	}
+
+
+  
+  .fe-chevron-left{
+    transform: rotate(180deg);
+  }
+  #slide-right svg{
+    transform: rotate(180deg);
+  }
+
+  .apexcharts-legend-series .apexcharts-legend-marker{
+    margin-left:4px ;
+  }
+  .apexcharts-tooltip-series-group .apexcharts-tooltip-marker{
+    margin-left: 10px;
+  }
+  .apexcharts-tooltip-text-y-value{
+    margin-right: 5px;
+  }
+
+//  .apexcharts-canvas text {
+//     text-anchor: start;
+//   }
+  .apexcharts-toolbar {
+    left: 14px;
+    right: inherit!important;
+  }
+  .accordion-toggle .fe-arrow-right{
+    transform: rotate(180deg);
+  }
+  .fc-scroller .fc-col-header {
+    width:100% !important;
+  }
+  .fc-daygrid-body .fc-scrollgrid-sync-table{
+    width: 100% !important;
+  }
+  .fc-scroller-liquid-absolute .fc-daygrid-body-balanced{
+    width: 100% !important;
+  }
+  .leaflet-container{
+    direction: initial;
+  }
+  .leaflet-left .leaflet-control {
+    margin-inline-start: 10px;
+  }
+  .leaflet-top .leaflet-control {
+    margin-block-start: 10px;
+  }
+  .dropdown-menu .dropdown-item i{
+    float: var(--float-left);
+  }
+
+  .main-contact-star .dropdown-menu .dropdown-item i {
+    float: var(--float-left);
+    padding-top: 8px;
+  }
+  .fa-angle-double-right{   
+    transform: rotate(180deg);
+  }
+  .dt-buttons .dt-button-collection{
+    left: inherit !important;
+  }
+  .btn-primary .fe-shopping-cart{    
+    float: var(--float-left);
+    padding-block-start: 3px;
+  }
+  #chart-bar-rotated tspan{
+    text-anchor: start;
+  }
+  .sp-picker-container{   
+    // text-anchor: start;
+    float: var(--float-right);
+  }
+  
+  element.style {
+  }
+  .btn:not(:disabled):not(.disabled) {
+      cursor: pointer;
+  }
+  .btn:not(:disabled):not(.disabled) {
+      cursor: pointer;
+  }
+  .dark-theme .btn, .dark-theme .sp-container button {
+      color: #dde3ea;
+  }
+  .dark-theme .btn-outline-light {
+      border-color: rgba(222, 228, 236, 0.07) !important;
+      color: #dde3ea;
+  }
+  .dark-theme .border {
+      border-color: rgba(222, 228, 236, 0.07) !important;
+  }
+  .handle-counter .counter-minus {
+      border-radius: 0px 3px 3px 0px !important;
+  }
+  .handle-counter .counter-plus {
+    border-radius: 3px 0px 0px 3px !important;
+  }
+  .twentytwenty-handle{
+    direction: ltr;
+  }
+  .main-result .dropdown-menu{
+    transform: none;
+    right: 12rem;
+    left: auto;
+  }
+  .onoffswitch2-checkbox:checked+.onoffswitch2-label:before {
+    left: 0px;
+    right: inherit;
+  }
+  .nice-select:after{
+    transform: rotate(314deg);
+  }
+  .nice-select.open:after {
+    transform: rotate(136deg);
+  }
+  .fc-direction-ltr {
+    direction: inherit;
+    text-align: start;
+  }
+  #chart-pai .apexcharts-canvas text {
+    text-anchor: middle;
+  }
+  .breadcrumb-style3 .breadcrumb1 .breadcrumb-item1::before{
+    transform: rotate(180deg);
+  }
+  .fc .fc-button .fc-icon.fc-icon-chevron-right, .fc-icon.fc-icon-chevron-left {
+    transform: rotate(180deg);
+  }
+  .intl-tel-input .flag-dropdown .selected-flag {
+    margin: 1px 1px 1px 2px;
+    padding: 9px 6px 8px 16px;
+    border-radius: 3px 0px 0px 3px;
+  }
+  .ui-datepicker .ui-datepicker-header .ui-datepicker-next:before {
+    content: "\f3cf" !important;
+  }
+  .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:before {
+    content: "\f3d1" !important;
+  }
+  #tree3 .si-arrow-right-circle{
+    transform: rotate(180deg);
+  }
+  .datetimepicker-days .table-condensed .glyphicon-arrow-right::before, .glyphicon-arrow-left::before{
+    transform: rotate(180deg);
+  }
+  .main-datetimepicker .datepicker_header a::before{    
+    transform: rotate(180deg);
+  }
+  @media (max-width: 1143px){
+    #productSummary,#recentorders,#projectSummary,#file-datatable,#removecolumns-edit.table tr td:last-child {
+        border-inline-end: 2px solid rgba(222, 228, 236, 0.07);
+    }
+    #delete-datatable,#basic-edit,#new-edit,#basic-edit.table tr td:last-child {
+        border-inline-end: 2px solid rgba(222, 228, 236, 0.07);
+    }
+    #new-edit.table tr td:last-child {
+        border-inline-end: 2px solid rgba(222, 228, 236, 0.07);
+    }
+  }
+}
+[dir=rtl] .irs-from, [dir=rtl] .irs-to, [dir=rtl] .irs-single {
+    inset-inline-start: auto;
+}
+.rtl .bs-tooltip-start .tooltip-arrow::before, .rtl .bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before, .rtl .bs-tooltip-end .tooltip-arrow::before, .rtl .bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before{
+ transform: rotate(180deg);
+}
+[dir=rtl] .bs-popover-end>.popover-arrow, [dir=rtl] .bs-popover-auto[data-popper-placement^=end]>.popover-arrow, [dir=rtl] .bs-popover-start>.popover-arrow, [dir=rtl] .bs-popover-auto[data-popper-placement^=start]>.popover-arrow_{
+ direction: ltr; 
+}
+.rtl .bs-popover-end>.popover-arrow, .bs-popover-auto[data-popper-placement^=end]>.popover-arrow {
+  inset-inline-start: calc((0.5rem + 0px) * -1);
+  inset-inline-end:auto;
+}
+/* ###### Rtl End ###### */

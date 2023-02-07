@@ -1,0 +1,661 @@
+{% extends 'reconciliation/components/base.html' %}
+{% load static %}
+
+    {% block styles %}
+
+    {% endblock %}
+    
+        {% block content %}
+        
+					<!-- breadcrumb -->
+					<div class="breadcrumb-header justify-content-between">
+						<div>
+							<h4 class="content-title mb-2">Tableau de bord</h4>
+						</div>
+						<div class="d-flex my-auto">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+									<li class="breadcrumb-item active " aria-current="page">Tableau de bord</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+					<!-- /breadcrumb -->
+
+					<!-- main-content-body -->
+					<div class="main-content-body">
+						<div class="row row-cards">
+							<div class="col-xl-6 col-xxl-3 col-sm-12 col-lg-6 col-md-6">
+								<div class="card card-img-holder text-default bg-color">
+									<div class="card-body">
+										<div class="d-flex">
+											<div class="my-auto">
+												<div class="circle-icon bg-primary text-center align-self-center shadow-primary"><img src="{% static 'assets/img/svgicons/circle.svg'%}" alt="circle" class="card-img-absolute"><i class= "bx bx-user tx-30 icon-user-bx text-white"></i></div>
+											</div>
+											<div class="project-content">
+												<h3 class="mb-0 tx-18">Followers</h3>
+												<div class="">
+													<span class="badge bg-success-transparent tx-success fs-10">65%</span>
+													<span class="px-2 text-muted">last month</span>
+												</div>
+											</div>
+											<h2 class="mt-2 ms-auto">10,257</h2>
+										</div>
+									</div>
+							   </div>
+							</div>
+							<div class="col-xl-6 col-xxl-3 col-sm-12 col-lg-6 col-md-6">
+								<div class="card card-img-holder text-default bg-color">
+									<div class="card-body">
+										<div class="d-flex">
+											<div class="my-auto">
+												<div class="circle-icon bg-secondary text-center align-self-center shadow-secondary"><img src="{% static 'assets/img/svgicons/circle.svg'%}" alt="circle" class="card-img-absolute"><i class= "bx bx-user tx-30 icon-user-bx  text-white"></i></div>
+											</div>
+											<div class="project-content">
+												<h3 class="mb-0 tx-18">Likes</h3>
+												<div class="">
+													<span class="badge bg-success-transparent tx-success fs-10">65%</span>
+													<span class="px-2 text-muted">last month</span>
+												</div>
+											</div>
+											<h2 class="mt-2 ms-auto">17,257</h2>
+										</div>
+									</div>
+							   </div>
+							</div>
+							<div class="col-xl-6 col-xxl-3 col-sm-12 col-lg-6 col-md-6">
+								<div class="card card-img-holder text-default bg-color">
+									<div class="card-body">
+										<div class="d-flex">
+											<div class="my-auto">
+												<div class="circle-icon bg-info text-center align-self-center shadow-info"><img src="{% static 'assets/img/svgicons/circle.svg'%}" alt="circle" class="card-img-absolute"><i class= "bx bx-user tx-30 icon-user-bx  text-white"></i></div>
+											</div>
+											<div class="project-content">
+												<h3 class="mb-0 tx-18">Comments</h3>
+												<div class="">
+													<span class="badge bg-secondary-transparent tx-secondary fs-10">65%</span>
+													<span class="px-2 text-muted"> last month</span>
+												</div>
+											</div>
+											<h2 class="mt-2 ms-auto">157</h2>
+										</div>
+									</div>
+							   </div>
+							</div>
+							<div class="col-xl-6 col-xxl-3 col-sm-12 col-lg-6 col-md-6">
+								<div class="card card-img-holder text-default bg-color">
+									<div class="card-body">
+										<div class="d-flex">
+											<div class="my-auto">
+												<div class="circle-icon bg-success text-center align-self-center shadow-success"><img src="{% static 'assets/img/svgicons/circle.svg'%}" alt="circle" class="card-img-absolute"><i class= "bx bx-user tx-30 icon-user-bx  text-white"></i></div>
+											</div>
+											<div class="project-content">
+												<h3 class="mb-0 tx-18">Posts</h3>
+												<div class="">
+													<span class="badge bg-secondary-transparent tx-secondary fs-10">65%</span>
+													<span class="px-2 text-muted">last month</span>
+												</div>
+											</div>
+											<h2 class="mt-2 ms-auto">1403</h2>
+										</div>
+									</div>
+							   </div>
+							</div>
+						</div>
+						<!-- row -->
+						<div class="row row-sm ">
+							<div class="col-xl-8 col-md-12 col-lg-12 ">
+								<div class="card overflow-hidden">
+									<div class="card-header bg-transparent pd-b-0 pd-t-20 bd-b-0">
+										<div class="d-flex justify-content-between">
+											<h4 class="card-title mg-b-10">Sales Report</h4>
+											<div class="dropdown">
+												<a href="javascript:void(0);" aria-expanded="false" aria-haspopup="true" class="px-2 py-1 rounded-1 tx-medium tx-12 bg-primary-gradient text-white" data-bs-toggle="dropdown" id="dropdownMenuButton">Yearly <i class="fe fe-chevron-down mx-1"></i></a>
+												<div class="dropdown-menu tx-13">
+													<a class="dropdown-item" href="javascript:void(0);">Daily</a>
+													<a class="dropdown-item" href="javascript:void(0);">Monthly</a>
+												</div>
+											</div>
+										</div>
+										<p class="tx-13 text-muted mb-2">The Project Budget is a tool used by project managers to estimate the total cost of a project. <a href="javascript:void(0)">Learn more</a></p>
+									</div>
+									<div class="card-body pd-y-7">
+										<div id="project-budget"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-4 col-md-6 col-lg-6">
+								<div class="card ">
+									<div class="card-header">
+										<div class="card-title">All Tasks</div>
+									</div>
+									<div class="card-body p-4">
+										<div class="chats-wrap">
+											<div class="chat-details mb-3">
+												<h4 class="mb-0">
+													<span class="h5 font-weight-normal">Sales Report</span>
+													<span class="float-end mt-1 tx-14   btn btn-sm text-default">95%</span>
+												</h4>
+												<div class="progress progress-md mt-3">
+													<div class="progress-bar progress-bar-striped bg-flat-primary progress-bar-animated" style="width: 70%"></div>
+												</div>
+											</div>
+											<div class="chat-details mb-3">
+												<h4 class="mb-0">
+													<span class="h5 font-weight-normal">List Completion</span>
+													<span class="float-end  mt-1 tx-14  btn btn-sm text-default">84%</span>
+												</h4>
+												<div class="progress progress-md mt-3">
+													<div class="progress-bar progress-bar-striped bg-flat-info progress-bar-animated" style="width: 60%"></div>
+												</div>
+											</div>
+											<div class="chat-details mb-3">
+												<h4 class="mb-0">
+													<span class="h5 font-weight-normal">Purchase Report</span>
+													<span class="float-end  mt-1 tx-14  btn btn-sm text-default">44%</span>
+												</h4>
+												<div class="progress progress-md mt-3">
+													<div class="progress-bar progress-bar-striped progress-bar-animated bg-flat-warning" style="width: 47%"></div>
+												</div>
+											</div>
+											<div class="chat-details mb-3">
+												<h4 class="mb-0">
+													<span class="h5 font-weight-normal">Revert Messages</span>
+													<span class="float-end  mt-1 tx-14  btn btn-sm text-default">64%</span>
+												</h4>
+												<div class="progress progress-md mt-3">
+													<div class="progress-bar progress-bar-striped progress-bar-animated  bg-flat-success" style="width: 75%"></div>
+												</div>
+											</div>
+											<div class="chat-details mb-3">
+												<h4 class="mb-0">
+													<span class="h5 font-weight-normal">Revert Messages</span>
+													<span class="float-end  mt-1 tx-14  btn btn-sm text-default">34%</span>
+												</h4>
+												<div class="progress progress-md mt-3">
+													<div class="progress-bar progress-bar-striped progress-bar-animated  bg-flat-danger" style="width: 45%"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-4 col-md-6 col-lg-6">
+								<div class="card">
+									<div class="card-header border-bottom">
+										<h5 class="card-title"> Sales Summary</h5>
+									</div>
+									<div class="card-body">
+										<div class="activity">
+										   <div class="timeline-section bg-primary"><i class='bx bx-bar-chart-alt'></i></div>
+											<div class="time-activity">
+												<div class="item-activity">
+													<div class="d-flex">
+														<div class="mt-1">
+															<h5 class="mb-0" >Total Revenue</h5>
+															<span class="mb-0  text-muted">weekly profit</span>
+														</div>
+														<div class="ms-auto">
+															<h4 class="font-weight-semibold label-medium-size mt-2 mb-0 text-primary me-2">$15300</h4>
+															<span class="mb-0 tx-12 text-muted">75% increased</span>
+														</div>
+
+													</div>
+												</div>
+											</div>
+											<div class="timeline-section bg-success"><i class='bx bx-wallet-alt' ></i></div>
+											 <div class="time-activity">
+												 <div class="item-activity">
+													 <div class="d-flex">
+														 <div class="mt-1">
+															 <h5 class="mb-0" >Total Tax</h5>
+															 <span class="mb-0  text-muted">weekly profit</span>
+														 </div>
+														 <div class="ms-auto">
+															 <h4 class="font-weight-semibold label-medium-size mt-2 mb-0 text-success me-2">$17300</h4>
+															 <span class="mb-0 tx-12  text-muted">62% increased</span>
+														 </div>
+
+													 </div>
+												 </div>
+											 </div>
+											 <div class="timeline-section bg-info"><i class='bx bx-money' ></i></div>
+											  <div class="time-activity">
+												  <div class="item-activity">
+													  <div class="d-flex">
+														  <div class="mt-1">
+															  <h5 class="mb-0" >Total Income</h5>
+															  <span class="mb-0  text-muted">weekly profit</span>
+														  </div>
+														  <div class="ms-auto">
+															  <h4 class="font-weight-semibold label-medium-size mt-2 mb-0 text-info me-2">$14300</h4>
+															  <span class="mb-0 tx-12 text-muted">55% increased</span>
+														  </div>
+
+													  </div>
+												  </div>
+											  </div>
+											  <div class="timeline-section bg-warning"><i class='bx bxs-hourglass-bottom' ></i></div>
+											   <div class="time-activity">
+												   <div class="item-activity">
+													   <div class="d-flex">
+														   <div class="mt-1">
+															   <h5 class="mb-0" >Total Expenses</h5>
+															   <span class="mb-0  text-muted">weekly profit</span>
+														   </div>
+														   <div class="ms-auto">
+															   <h4 class="font-weight-semibold label-medium-size mt-2 mb-0 text-warning me-2">$43300</h4>
+															   <span class="mb-0 tx-12 text-muted">25% increased</span>
+														   </div>
+
+													   </div>
+												   </div>
+											   </div>
+											   <div class="timeline-section bg-secondary"><i class='bx bx-happy-heart-eyes' ></i></div>
+												<div class="time-activity">
+													<div class="item-activity mb-0">
+														<div class="d-flex">
+															<div class="mt-1">
+																<h5 class="mb-0" >Customer visitors</h5>
+																<span class="mb-0  text-muted">weekly visitors</span>
+															</div>
+															<div class="ms-auto">
+																<h4 class="font-weight-semibold label-medium-size mt-2 mb-0 text-secondary me-2">74,300</h4>
+																<span class="mb-0 tx-12 text-muted">45% increased</span>
+															</div>
+
+														</div>
+													</div>
+												</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-4 col-md-6 col-lg-6">
+								<div class="card">
+									<div class="card-header border-bottom">
+										<h5 class="card-title">TASKS Assighned</h5>
+									</div>
+									<div class="card-body p-0">
+										<div class="clearfix border-bottom p-3 ">
+											<div class="col mb-0" >
+												<div class="d-flex main-user-img">
+													<div class="main-img-user avatar  avatar-md">
+														<img alt="avatar" class="rounded-circle" src="{% static 'assets/img/users/2.jpg'%}">
+													</div>
+													<div class="float-start mt-2 ms-2">
+														<h5 class="tx-15 mb-0"> Dennis Dalpiaz</h5>
+														<p class="mb-0 text-muted">Add a new projects</p>
+													</div>
+													<div class="ms-auto mt-2 ps-2">
+														<h6 class="tx-15 mb-0">AngularJS Template</h6>
+														<small class="text-muted">30 mins ago</small>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="clearfix border-bottom p-3 ">
+											<div class="col mb-0" >
+												<div class="d-flex main-user-img">
+													<div class="main-img-user avatar  avatar-md">
+														<img alt="avatar" class="rounded-circle" src="{% static 'assets/img/users/1.jpg'%}">
+													</div>
+													<div class="float-start mt-2 ms-2">
+														<h5 class="tx-15 mb-0"> Joey Coronel</h5>
+														<p class="mb-0 text-muted">Added a new projects</p>
+													</div>
+													<div class="ms-auto mt-2 ps-2">
+														<h6 class="tx-15 mb-0">Free HTML Template</h6>
+														<small class="text-muted">30 mins ago</small>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="clearfix border-bottom p-3 ">
+											<div class="col mb-0" >
+												<div class="d-flex main-user-img">
+													<div class="main-img-user avatar  avatar-md">
+														<img alt="avatar" class="rounded-circle" src="{% static 'assets/img/users/7.jpg'%}">
+													</div>
+													<div class="float-start mt-2 ms-2">
+														<h5 class="tx-15 mb-0"> Norbert Bridwell</h5>
+														<p class="mb-0 text-muted">Added a new projects</p>
+													</div>
+													<div class="ms-auto mt-2 ps-2">
+														<h6 class="tx-15 mb-0">Free HTML Template</h6>
+														<small class="text-muted">40 mins ago</small>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="clearfix border-bottom p-3 ">
+											<div class="col mb-0" >
+												<div class="d-flex main-user-img">
+													<div class="main-img-user avatar  avatar-md">
+														<img alt="avatar" class="rounded-circle" src="{% static 'assets/img/users/3.jpg'%}">
+													</div>
+													<div class="float-start mt-2 ms-2">
+														<h5 class="tx-15 mb-0">  Bredwell jorbert</h5>
+														<p class="mb-0 text-muted">Added a new projects</p>
+													</div>
+													<div class="ms-auto mt-2 ps-2">
+														<h6 class="tx-15 mb-0">New UI Dashboards</h6>
+														<small class="text-muted">40 mins ago</small>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="clearfix  p-3 ">
+											<div class="col mb-0" >
+												<div class="d-flex main-user-img">
+													<div class="main-img-user avatar  avatar-md">
+														<img alt="avatar" class="rounded-circle" src="{% static 'assets/img/users/9.jpg'%}">
+													</div>
+													<div class="float-start mt-2 ms-2">
+														<h5 class="tx-15 mb-0">Predwell robert</h5>
+														<p class="mb-0 text-muted">Added a new projects</p>
+													</div>
+													<div class="ms-auto mt-2  ps-2">
+														<h6 class="tx-15 mb-0">AngularJS Template</h6>
+														<small class="text-muted">40 mins ago</small>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-4 col-md-6 col-lg-6">
+								<div class="card">
+									<div class="card-header border-bottom">
+										<h5 class="card-title">Recent transcations</h5>
+									</div>
+									<div class="card-body p-0">
+										<div class="clearfix border-bottom p-3 ">
+											<div class="col mb-0" >
+												<div class="d-flex">
+													<div class="avatar avatar-md bg-success-transparent rounded-circle">
+														O
+													</div>
+													<div class="float-start mt-2 ms-2">
+														<h6 class="mb-1">Oscar Nommanee</h6>
+														<p class="mb-0 tx-13 text-muted">App improvement</p>
+													</div>
+													<div class="ms-auto mt-2">
+														<h6 class="mb-1 tx-15 font-weight-semibold">$45.234<i
+															class="fas fa-level-up-alt ms-2 text-success m-l-10"></i>
+													  </h6>
+													<p class="mb-0 tx-11 text-muted">12 Jan 2020</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="clearfix border-bottom p-3 ">
+											<div class="col mb-0" >
+												<div class="d-flex">
+													<div class="avatar avatar-md bg-secondary-transparent rounded-circle">
+														W
+													</div>
+													<div class="float-start mt-2 ms-2">
+														<h6 class="mb-1">Wayde N. Thabalanz</h6>
+														<p class="mb-0 tx-13 text-muted">Milestone</p>
+													</div>
+													<div class="ms-auto mt-2">
+														<h6 class="mb-1 tx-15 font-weight-semibold ">$23.452<i
+																class="fas fa-level-down-alt ms-2 text-danger m-l-10"></i>
+														</h6>
+														<p class="mb-0 tx-11 text-muted">23 Jan 2020</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="clearfix border-bottom p-3 ">
+											<div class="col mb-0" >
+												<div class="d-flex">
+													<div class="avatar avatar-md bg-info-transparent rounded-circle">
+														D
+													</div>
+													<div class="float-start mt-2 ms-2">
+														<h6 class="mb-1">Dozeaplikayshun Wynn</h6>
+														<p class="mb-0 tx-13 text-muted">Sales executive</p>
+													</div>
+													<div class="ms-auto mt-2">
+														<h6 class="mb-1 tx-15 font-weight-semibold  ">$78.001<i
+																class="fas fa-level-down-alt ms-2 text-danger m-l-10"></i>
+														</h6>
+														<p class="mb-0 tx-11 text-muted">4 Apr 2020</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="clearfix border-bottom p-3 ">
+											<div class="col mb-0" >
+												<div class="d-flex">
+													<div class="avatar avatar-md bg-danger-transparent rounded-circle">
+														p
+													</div>
+													<div class="float-start mt-2 ms-2">
+														<h6 class="mb-1">Polly Wannakrakouer</h6>
+														<p class="mb-0 tx-13 text-muted">Milestone2</p>
+													</div>
+													<div class="ms-auto mt-2">
+														<h6 class="mb-1 tx-15 font-weight-semibold  ">$37.285<i
+																class="fas fa-level-up-alt ms-2 text-success m-l-10"></i>
+														</h6>
+														<p class="mb-0 tx-11 text-muted">4 Apr 2020</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="clearfix  p-3 ">
+											<div class="col mb-0" >
+												<div class="d-flex">
+													<div class="avatar avatar-md bg-warning-transparent rounded-circle">
+														C
+													</div>
+													<div class="float-start mt-2 ms-2">
+														<h6 class="mb-1">Con Staninterupshuns</h6>
+														<p class="mb-0 tx-13 text-muted">App improvement</p>
+													</div>
+													<div class="ms-auto mt-2">
+														<h6 class="mb-1 tx-15 font-weight-semibold ">$25.341<i
+																class="fas fa-level-down-alt ms-2 text-danger m-l-10"></i>
+														</h6>
+														<p class="mb-0 tx-11 text-muted">4 Apr 2020</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /row -->
+
+						<div class="row row-cards">
+							<div class="col-md-12 col-lg-12 col-xl-3">
+								<div class="card">
+									<div>
+										<div class="weather-card one">
+											<div class="top">
+												<div class="wrapper">
+													<div class="mynav">
+														<a href="javascript:void(0)"><span class="fe fe-chevron-left p-2"></span></a>
+														<a href="javascript:void(0)"><span class="fe fe-settings p-2"></span></a>
+													</div>
+													<h2 class="text-white mt-4">Today</h2>
+													<p class="temp mb-0">
+														<span class='bx bx-cloud-light-rain tx-50 text-white'></span>
+														<span class="temp-value">27</span>
+														<span class="deg">0</span>
+														<a href="javascript:void(0)"><span class="temp-type">C</span></a>
+													</p>
+													<p class=" tx-18 text-white mb-2">Partly cloudy</p>
+												</div>
+											</div>
+											<div class="bottom">
+												<a href="javascript:void(0);"><i class="fe fe-chevron-up uparrow"></i></a>
+												<div class="wrapper">
+													<ul class="forecast">
+														<li class="active">
+															<span class="date">Sunny</span>
+															<span class="fe fe-sun condition">
+																<span class="temp">28<span class="deg">0</span><span class="temp-type">C</span></span>
+															</span>
+														</li>
+														<li class="active">
+															<span class="date">Wind</span>
+															<span class="fe fe-cloud condition">
+																<span class="temp">73<span class="deg">0</span><span class="temp-type">C</span></span>
+															</span>
+														</li>
+														<li class="active">
+															<span class="date">Rain</span>
+															<span class="fe fe-cloud-rain condition">
+																<span class="temp">32<span class="deg">0</span><span class="temp-type">C</span></span>
+															</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-12 col-md-12 col-xl-9">
+								<div class="card ">
+									<div class="card-header">
+										<h5 class="card-title">Invoice Table </h5>
+									</div>
+									<div class="card-body">
+										<div class="table-responsive">
+											<table class="table table-striped card-table mt-0 mb-0 table-nowrap border"
+												id="datatable">
+												<thead>
+													<tr>
+														<th>Invoice ID</th>
+														<th scope="row">Customer Name</th>
+														<th>Customer ID</th>
+														<th>Date</th>
+														<th>Order Value</th>
+														<th>Status</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>
+															<a class="font-weight-normal1" href="javascript:void(0)">#002584611</a>
+														</td>
+														<td>Joan Powell</td>
+														<td>JoanPowell@gmail.com</td>
+														<td>08/3/2021</td>
+														<td>$450,870</td>
+														<td>
+															<span
+															class="badge bg-warning border-warning fs-11">Pending</span>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<a class="font-weight-normal1" href="javascript:void(0)">#004641215</a>
+														</td>
+														<td>Gavin Gibson</td>
+														<td>JoanPowell@gmail.com</td>
+														<td>08/3/2021</td>
+														<td>$230,540</td>
+														<td>
+															<span
+																class="badge bg-danger border-danger fs-11">Failed</span>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<a class="font-weight-normal1" href="javascript:void(0)">#004651234</a>
+														</td>
+														<td>Junior Sam</td>
+														<td>JoanPowell@gmail.com</td>
+														<td>08/3/2021</td>
+														<td>$43,198</td>
+														<td>
+															<span
+																class="badge bg-success border-success fs-11">Paid</span>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<a class="font-weight-normal1" href="javascript:void(0)">#00434567</a>
+														</td>
+														<td>Gabriel</td>
+														<td>JoanPowell@gmail.com</td>
+														<td>08/3/2021</td>
+														<td>$230,540</td>
+														<td>
+															<span
+																class="badge bg-warning border-warning fs-11">Pending</span>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<a class="font-weight-normal1" href="javascript:void(0)">#004345623</a>
+														</td>
+														<td>Zach efron</td>
+														<td>JoanPowell@gmail.com</td>
+														<td>08/3/2021</td>
+														<td>$55,300</td>
+														<td>
+															<span
+																class="badge bg-success border-success fs-11">Paid</span>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<a class="font-weight-normal1" href="javascript:void(0)">#004345234</a>
+														</td>
+														<td>Mona matty</td>
+														<td>JoanPowell@gmail.com</td>
+														<td>08/3/2021</td>
+														<td>$234,100</td>
+														<td>
+															<span
+																class="badge bg-success border-success fs-11">Paid</span>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<a class="font-weight-normal1" href="javascript:void(0)">#004567455</a>
+														</td>
+														<td>Samantha May</td>
+														<td>JoanPowell@gmail.com</td>
+														<td>08/3/2021</td>
+														<td>$43,198</td>
+														<td>
+															<span
+																class="badge bg-warning border-warning fs-11">Pending</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /row -->
+					</div>
+					<!-- /row -->
+
+        {% endblock %}
+
+    {% block scripts %}
+
+		<!-- ApexChart -->
+		<script src="{% static 'assets/js/apexcharts.min.js'%}"></script>
+
+		<!-- Moment js -->
+		<script src="{% static 'assets/plugins/moment/moment.js'%}"></script>
+
+		<!--- Index js -->
+		<script src="{% static 'assets/js/index.js'%}"></script>
+
+    {% endblock %}

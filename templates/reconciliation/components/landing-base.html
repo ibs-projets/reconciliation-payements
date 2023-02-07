@@ -1,0 +1,81 @@
+{% load static %}
+<!doctype html>
+<html lang="en" dir="ltr">
+	<head>
+        <meta charset="UTF-8">
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="Description" content="Django Bootstrap Responsive Admin Web Dashboard Template">
+        <meta name="Author" content="Spruko Technologies Private Limited">
+        <meta name="Keywords" content="admin, Django, admin dashboard, Django admin dashboard template, admin panel template, Django admin template, bootstrap 5 admin template, bootstrap 5 dashboard, bootstrap admin dashboard, Django bootstrap admin template, bootstrap ui kit, dashboard bootstrap 5, Django dashboard design, dashboard html, Django dashboard template, dashboard ui kit, Django envato templates, Django flat ui, premium quality">
+    
+        <!-- Title -->
+        <title>Adminor - Django Admin Panel Dashboard Template</title>	
+    
+        <!-- Favicon -->
+        <link rel="icon" href="{% static 'assets/img/brand/favicon.png'%}" type="image/x-icon">
+
+        <!-- Styles -->
+        {% include 'components/layouts/landingpage/styles.html' %}
+        {% block styles %}{% endblock %}
+
+        <!-- Switcher css -->
+        <link href="{% static 'assets/switcher/css/switcher.css'%}" rel="stylesheet">
+        <link href="{% static 'assets/switcher/demo.css'%}" rel="stylesheet">
+
+    </head>
+
+    <body class="main-body app sidebar-mini ltr landing-page horizontalmenu">
+
+        <!-- Switcher -->
+        {% include 'components/layouts/landingpage/switcher.html' %}
+        <!-- End Switcher -->
+
+        <!-- Loader -->
+        <div id="global-loader">
+            <img src="{% static 'assets/img/loaders/loader-4.svg'%}" class="loader-img" alt="Loader">
+        </div>
+        <!-- /Loader -->
+
+        <!-- PAGE -->
+        <div class="page">
+            <div class="page-main">
+
+                <!-- app header code -->
+                {% include 'components/layouts/landingpage/app-header1.html' %}
+                <!-- End app header Code -->
+
+                <!-- app sidebar Code -->
+                {% include 'components/layouts/landingpage/app-sidebar1.html' %}
+                <!-- End app sidebar Code -->
+
+                {% block content %}{% endblock %}
+
+            </div>
+
+
+            {% block modal %}{% endblock %}
+
+            <!-- Footer opened -->
+            {% include 'components/layouts/landingpage/footer.html' %}
+            <!-- Footer closed -->
+
+        </div>
+        <!-- End Page -->
+
+        <!-- Script -->
+        {% include 'components/layouts/landingpage/scripts.html' %}
+        {% block scripts %}{% endblock %}
+        
+        <!--themecolor js-->
+        <script src="{% static 'assets/js/themecolor.js' %}"></script>
+
+        <!-- Switcher js -->
+        <script src="{% static 'assets/switcher/js/switcher.js'%}"></script>
+        
+		<!-- CUSTOM JS -->
+		<script src="{% static 'assets/landing/js/landing.js'%}"></script>
+        
+    </body>
+
+</html>

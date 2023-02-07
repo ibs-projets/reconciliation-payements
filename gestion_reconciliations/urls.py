@@ -21,6 +21,7 @@ urlpatterns = [
     path('recette-moov', views.recette_moov,name="recette_moov"),
     path('recuper-province', views.get_province,name="get_province"),
     path('recuper-ville', views.get_ville,name="get_ville"),
+    path('edition/<int:id>/magasin', views.editer_magasin,name="editer_magasin"),
     path('recuper-type-magasin', views.get_typemagasin,name="get_typemagasin"),
     path('index2', views.index2,name="index2"),
     path('index4', views.index4,name="index4"),

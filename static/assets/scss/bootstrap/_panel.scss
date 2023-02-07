@@ -1,0 +1,100 @@
+
+/* ######  Panel ###### */
+
+.expanel-default {
+	border: $border !important;
+  }
+  
+  .expanel-success {
+	border: $success !important;
+  }
+  
+  .expanel-danger {
+	border: $danger !important;
+  }
+  .expanel-secondary {
+	border: $secondary !important;
+  }
+  
+  .expanel-info {
+	border: $info !important;
+  }
+  
+  
+  .expanel-primary {
+	border: $primary !important;
+  }
+  
+  .expanel-success > .expanel-heading {
+	color: $white !important;
+	background-color: $success !important;
+	border-color: $success !important;
+  }
+  .expanel-primary > .expanel-heading {
+	color: $white !important;
+	background-color: $primary !important;
+	border-color: $primary !important;
+  }
+  .expanel-secondary > .expanel-heading {
+	color: $white !important;
+	background-color: $secondary !important;
+	border-color: $secondary !important;
+  }
+  
+  .expanel-info > .expanel-heading {
+	color: $white !important;
+	background-color: $info !important;
+	border-color: $info !important;
+  }
+  
+  .expanel-danger > .expanel-heading {
+	color: $white !important;
+	background-color: $danger !important;
+	border-color: $danger !important;
+  }
+  
+  .expanel-warning > .expanel-heading {
+	color: $white !important;
+	background-color: $warning !important;
+	border-color: $warning !important;
+  }
+  
+  .expanel-title {
+	margin-block-start: 0 !important;
+	margin-block-end: 0 !important;
+	font-size: 16px !important;
+	color: inherit !important;
+  }
+  
+  .expanel {
+	margin-block-end: 20px !important;
+	background-color: $white !important;
+	border: 1px solid $border !important;
+	border-radius: 4px !important;
+  }
+  
+  .expanel-default > .expanel-heading {
+	background-color: $border !important;
+	border: 1px solid $border !important;
+  }
+  
+  .expanel-heading {
+	padding: 10px 15px !important;
+	border-block-end: 1px solid $border;
+	border-start-start-radius: 3px !important;
+	border-start-end-radius: 3px !important;
+    border: 1px solid  $border;
+  }
+  
+  .expanel-footer {
+	padding: 10px 15px !important;
+	background-color:  $border !important;
+	border-block-start: 1px solid $border !important;
+	border-end-end-radius: 3px !important;
+	border-end-start-radius: 3px !important;
+  }
+  
+  .expanel-body {
+	padding: 15px !important;
+  }
+  /* ######  Panel End ###### */

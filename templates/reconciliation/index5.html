@@ -1,0 +1,473 @@
+{% extends 'reconciliation/components/base.html' %}
+{% load static %}
+
+    {% block styles %}
+
+    {% endblock %}
+    
+        {% block content %}
+        
+					<!-- breadcrumb -->
+					<div class="breadcrumb-header justify-content-between">
+						<div>
+							<h4 class="content-title mb-2">Dashboard</h4>
+						</div>
+						<div class="d-flex my-auto">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+									<li class="breadcrumb-item active " aria-current="page">Dashboard 05</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+					<!-- /breadcrumb -->
+
+					<!-- main-content-body -->
+					<div class="main-content-body">
+						<div class="row row-sm">
+							<div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+								<div class="card border-0 overflow-hidden">
+									<div class="">
+										<div class="d-flex">
+											<div class="my-auto square-icon bg-danger shadow-danger">
+												<i class='bx bx-cart-alt bx-icon tx-40 text-white text-center'></i>
+											</div>
+											<div class="project-content p-4">
+												<h3 class="mb-0 tx-18">Total Orders</h3>
+												<div class="">
+													<span class="tx-12 font-weight-semibold tx-danger"><i class="fe fe-arrow-up-right mx-1"></i>+12.86%</span>
+												</div>
+											</div>
+											<h2 class="ms-auto pe-4 mt-4">10,257</h2>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+								<div class="card border-0 overflow-hidden">
+									<div class="">
+										<div class="d-flex">
+											<div class="my-auto square-icon bg-secondary shadow-secondary">
+												<i class='bx bx-money bx-icon tx-40 text-white text-center'></i>
+											</div>
+											<div class="project-content p-4">
+												<h3 class="mb-0 tx-18">Total Sales</h3>
+												<div class="">
+													<span class="tx-12 font-weight-semibold tx-secondary"><i class="fe fe-arrow-up-right mx-1"></i>+82.86%</span>
+												</div>
+											</div>
+											<h2 class="ms-auto pe-4 mt-4">775.54</h2>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+								<div class="card border-0 overflow-hidden">
+									<div class="">
+										<div class="d-flex">
+											<div class="my-auto square-icon bg-info shadow-info">
+												<i class='bx bx-user bx-icon tx-40 text-white text-center'></i>
+											</div>
+											<div class="project-content p-4">
+												<h3 class="mb-0 tx-18">Total Customers</h3>
+												<div class="">
+													<span class="tx-12 font-weight-semibold text-info"><i class="fe fe-arrow-up-right mx-1"></i>+55.21%</span>
+												</div>
+											</div>
+											<h2 class="ms-auto pe-4 mt-4 text-break">975,04</h2>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+								<div class="card border-0 overflow-hidden">
+									<div class="">
+										<div class="d-flex">
+											<div class="my-auto square-icon bg-success shadow-success">
+												<i class='bx bx-line-chart bx-icon tx-40 text-white text-center'></i>
+											</div>
+											<div class="project-content p-4">
+												<h3 class="mb-0 tx-18">Total Profit</h3>
+												<div class="">
+													<span class="tx-12 font-weight-semibold tx-success"><i class="fe fe-arrow-up-right mx-1"></i>+95.21%</span>
+												</div>
+											</div>
+											<h2 class="ms-auto pe-4 mt-4 text-break">$875.054</h2>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- row -->
+						<div class="row row-sm ">
+							<div class="col-xxl-8  col-xl-12 col-lg-12">
+								<div class="card">
+									<div class="card-header">
+										<h3 class="card-title">Sales Profit</h3>
+									</div>
+									<div class="card-body">
+										<div class="chart-wrapper">
+											<div id="chart-eco"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-4 col-lg-6 col-xl-6 col-md-6">
+								<div class="card">
+									<div class="card-header">
+										<div class="card-title">Visitors From Location</div>
+									</div>
+									<div class="card-body">
+										<div class="ht-250 world-map" id="vmap-eco"></div>
+									</div>
+									<div class="card-footer">
+										<div class="table-responsive">
+											<table class="table border-width border-0 mb-0">
+												<tbody>
+													<tr class="mb-1">
+														<td class="border-top-0 px-0 py-1">
+															<div class="d-flex align-items-center">
+																<div class="me-3">
+																	<div class="avatar p-1 rounded-5 bg-transparent border"><img src="{% static 'assets/img/flags-img/7.jpg'%}" alt="flag" class="rounded-5 "></div>
+																</div>
+																<span>Spain</span>
+															</div>
+														</td>
+														<td class="border-top-0 px-0 pt-0 py-2 text-end"><span class="text-muted">72,241</span></td>
+														<td class="border-top-0 px-0 pt-0 py-2 text-end"><span class="tx-success"><i class="fe fe-arrow-up me-1"></i> +0.21%</span></td>
+													</tr>
+													<tr  class="mb-1">
+														<td class="border-top-0 px-0  py-2">
+															<div class="d-flex align-items-center">
+																<div class="me-3">
+																	<div class="avatar p-1 rounded-5 bg-transparent border"><img src="{% static 'assets/img/flags-img/2.jpg'%}" alt="flag" class="rounded-5 "></div>
+																</div>
+																<span class="pb-1">Argentina</span>
+															</div>
+														</td>
+														<td class="border-top-0 px-0 pt-0 py-2 text-end"><span class="text-muted">8,237</span></td>
+														<td class="border-top-0 px-0 pt-0 py-2 text-end"><span class="tx-success"><i class="fe fe-arrow-up me-1"></i> +0.11%</span></td>
+													</tr>
+													<tr  class="mb-1">
+														<td class="border-top-0 p-0">
+															<div class="d-flex align-items-center">
+																<div class="me-3">
+																	<div class="avatar p-1 rounded-5 bg-transparent border"><img src="{% static 'assets/img/flags-img/3.jpg'%}" alt="flag" class="rounded-5"></div>
+																</div>
+																<span>Canada</span>
+															</div>
+														</td>
+														<td class="border-top-0 p-0 py-2 text-end"><span class="text-muted">2,893</span></td>
+														<td class="border-top-0 p-0 py-2 text-end"><span class="tx-danger"><i class="fe fe-arrow-down me-1"></i>-0.54%</span></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-3 col-lg-6 col-xl-6  col-md-6">
+								<div class="card">
+									<div class="card-header">
+										<div class="card-title">
+											Top Customers
+										</div>
+									</div>
+									<div class="card-body">
+										<div class="table-responsive">
+											<table class="table border-width border-0 mb-0">
+												<tbody>
+													<tr>
+														<td class="border-top-0">
+															<div class="d-flex">
+																<div class="me-2">
+																	<span class="avatar rounded-5"><img src="{% static 'assets/img/users/1.jpg'%}" alt="img" class="rounded-5"></span>
+																</div>
+																<div class="flex-1">
+																	<h6 class="mb-1">Perry Scope</h6>
+																	<span class="text-muted">Perry433@gamil.com</span>
+																</div>
+															</div>
+														</td>
+														<td class="border-top-0">
+															<div class="tx-18">10,234</div>
+															<span class="text-muted">orders</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="border-top-0">
+															<div class="d-flex">
+																<div class="me-2">
+																	<span class="avatar rounded-5"><img src="{% static 'assets/img/users/16.jpg'%}" alt="img" class="rounded-5"></span>
+																</div>
+																<div class="flex-1">
+																	<h6 class="mb-1">Bridget Theriv</h6>
+																	<span class="text-muted">bridget883@demo.com</span>
+																</div>
+															</div>
+														</td>
+														<td class="border-top-0">
+															<div class="tx-18">20,234</div>
+															<span class="text-muted">orders</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="border-top-0">
+															<div class="d-flex">
+																<div class="me-2">
+																	<span class="avatar rounded-5"><img src="{% static 'assets/img/users/12.jpg'%}" alt="img" class="rounded-5"></span>
+																</div>
+																<div class="flex-1">
+																	<h6 class="mb-1">Naren Onnabit</h6>
+																	<span class="text-muted">naren83@demo.com</span>
+																</div>
+															</div>
+														</td>
+														<td class="border-top-0">
+															<div class="tx-18">9,234</div>
+															<span class="text-muted">orders</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="border-top-0">
+															<div class="d-flex">
+																<div class="me-2">
+																	<span class="avatar rounded-5"><img src="{% static 'assets/img/users/8.jpg'%}" alt="img" class="rounded-5"></span>
+																</div>
+																<div class="flex-1">
+																	<h6 class="mb-1">Anita Bath</h6>
+																	<span class="text-muted">mnita121@demo.com</span>
+																</div>
+															</div>
+														</td>
+														<td class="border-top-0">
+															<div class="tx-18">19,234</div>
+															<span class="text-muted">orders</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="border-top-0">
+															<div class="d-flex">
+																<div class="me-2">
+																	<span class="avatar rounded-5"><img src="{% static 'assets/img/users/5.jpg'%}" alt="img" class="rounded-5"></span>
+																</div>
+																<div class="flex-1">
+																	<h6 class="mb-1">Laura Norda</h6>
+																	<span class="text-muted">laura794@demo.com</span>
+																</div>
+															</div>
+														</td>
+														<td class="border-top-0">
+															<div class="tx-18">19,034</div>
+															<span class="text-muted">orders</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="border-top-0 pb-1">
+															<div class="d-flex">
+																<div class="me-2">
+																	<span class="avatar rounded-5"><img src="{% static 'assets/img/users/2.jpg'%}" alt="img" class="rounded-5"></span>
+																</div>
+																<div class="flex-1">
+																	<h6 class="mb-1">Amanda Ray</h6>
+																	<span class="text-muted">manda432@demo.com</span>
+																</div>
+															</div>
+														</td>
+														<td class="border-top-0">
+															<div class="tx-18">7,234</div>
+															<span class="text-muted">orders</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-9  col-xl-12 col-lg-12">
+								<div class="card">
+									<div class="card-header">
+										<div class="card-title">Product Summary</div>
+									</div>
+									<div class="card-body mt-2">
+										<div class="table-responsive">
+											<table class="table table-bordered text-nowrap mb-0" id="productSummary">
+												<thead>
+													<tr>
+														<th>Date</th>
+														<th>Product</th>
+														<th>Price</th>
+														<th>Payment Method</th>
+														<th>Transaction ID</th>
+														<th>Status</th>
+														<th>Actions</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>10-11-21</td>
+														<td>
+															<div class="d-flex align-items-center">
+																<div class="avatar rounded-5 avatar-sm me-2">
+																	<img src="{% static 'assets/img/ecommerce/06.jpg'%}" alt="avatar" class="rounded-5">
+																</div>
+																<a href="javascript:void(0)" class="text-dark">Sed vero et ipsum et</a>
+															</div>
+														</td>
+														<td>$18,900</td>
+														<td>Cash On Delivery</td>
+														<td><a href="invoice" class="text-dark">#23412858169</a></td>
+														<td><span class="badge badge-pill bg-primary-transparent tx-primary px-3 py-2 tx-11">Shipped</span></td>
+														<td>
+															<div class="btn-list">
+																<a href="javascript:void(0)" class="btn btn-sm btn-def py-2 rounded-5 border text-muted tx-14"><i class="fe fe-edit"></i></a>
+																<a href="javascript:void(0)" class="btn btn-sm btn-def py-2 rounded-5 border text-muted tx-14"><i class="fe fe-trash"></i></a>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>26-01-22</td>
+														<td>
+															<div class="d-flex align-items-center">
+																<div class="avatarrounded-5 avatar-sm me-2">
+																	<img src="{% static 'assets/img/ecommerce/04.jpg'%}" alt="avatar" class="rounded-5">
+																</div>
+																<a href="product-details" class="text-dark">Rebum dolores at erat ipsum</a>
+															</div>
+														</td>
+														<td>$3,200</td>
+														<td>Online</td>
+														<td><a href="invoice" class="text-dark">#51702935164</a></td>
+														<td><span class="badge badge-pill bg-secondary-transparent  tx-secondary px-3 py-2 tx-11">Pending</span></td>
+														<td>
+															<div class="btn-list">
+																<a href="javascript:void(0)" class="btn btn-sm btn-def py-2 rounded-5 border text-muted tx-14"><i class="fe fe-edit"></i></a>
+																<a href="javascript:void(0)" class="btn btn-sm btn-def py-2 rounded-5 border text-muted tx-14"><i class="fe fe-trash"></i></a>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>17-09-21</td>
+														<td>
+															<div class="d-flex align-items-center">
+																<div class="avatarrounded-5 avatar-sm me-2">
+																	<img src="{% static 'assets/img/ecommerce/02.jpg'%}" alt="avatar" class="rounded-5">
+																</div>
+																<a href="productdetails" class="text-dark">Ipsum et sit diam ut</a>
+															</div>
+														</td>
+														<td>$22,600</td>
+														<td>Online</td>
+														<td><a href="invoice" class="text-dark">#71802951620</a></td>
+														<td><span class="badge badge-pill bg-success-transparent tx-success px-3 py-2 tx-11">Delivered</span></td>
+														<td>
+															<div class="btn-list">
+																<a href="javascript:void(0)" class="btn btn-sm btn-def py-2 rounded-5 border text-muted tx-14"><i class="fe fe-edit"></i></a>
+																<a href="javascript:void(0)" class="btn btn-sm btn-def py-2 rounded-5 border text-muted tx-14"><i class="fe fe-trash"></i></a>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>06-08-21</td>
+														<td>
+															<div class="d-flex align-items-center">
+																<div class="avatarrounded-5 avatar-sm me-2">
+																	<img src="{% static 'assets/img/ecommerce/01.jpg'%}" alt="avatar" class="rounded-5">
+																</div>
+																<a href="productdetails" class="text-dark">No stet eos justo voluptua</a>
+															</div>
+														</td>
+														<td>$6,700</td>
+														<td>Cash On Delivery</td>
+														<td><a href="invoice" class="text-dark">#91012557664</a></td>
+														<td><span class="badge badge-pill bg-danger-transparent tx-danger px-3 py-2 tx-11">Cancelled</span></td>
+														<td>
+															<div class="btn-list">
+																<a href="javascript:void(0)" class="btn btn-sm btn-def py-2 rounded-5 border text-muted tx-14"><i class="fe fe-edit"></i></a>
+																<a href="javascript:void(0)" class="btn btn-sm btn-def py-2 rounded-5 border text-muted tx-14"><i class="fe fe-trash"></i></a>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>17-04-21</td>
+														<td>
+															<div class="d-flex align-items-center">
+																<div class="avatarrounded-5 avatar-sm me-2">
+																	<img src="{% static 'assets/img/ecommerce/03.jpg'%}" alt="avatar" class="rounded-5">
+																</div>
+																<a href="productdetails" class="text-dark">Eos justo nonumy stet sit</a>
+															</div>
+														</td>
+														<td>$49,670</td>
+														<td>Online</td>
+														<td><a href="invoice" class="text-dark">#12352990666</a></td>
+														<td><span class="badge badge-pill bg-secondary-transparent  tx-secondary px-3 py-2 tx-11">Pending</span></td>
+														<td>
+															<div class="btn-list">
+																<a href="javascript:void(0)" class="btn btn-sm btn-def py-2 rounded-5 border text-muted tx-14"><i class="fe fe-edit"></i></a>
+																<a href="javascript:void(0)" class="btn btn-sm btn-def py-2 rounded-5 border text-muted tx-14"><i class="fe fe-trash"></i></a>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>08-02-21</td>
+														<td>
+															<div class="d-flex align-items-center">
+																<div class="avatarrounded-5 avatar-sm me-2">
+																	<img src="{% static 'assets/img/ecommerce/08.jpg'%}" alt="avatar" class="rounded-5">
+																</div>
+																<a href="productdetails" class="text-dark">Diam voluptua stet invidunt sed</a>
+															</div>
+														</td>
+														<td>$1,000</td>
+														<td>Cash On Delivery</td>
+														<td><a href="invoice" class="text-dark">#47652758630</a></td>
+														<td><span class="badge badge-pill bg-success-transparent tx-success px-3 py-2 tx-11">Delivered</span></td>
+														<td>
+															<div class="btn-list">
+																<a href="javascript:void(0)" class="btn btn-sm btn-def py-2 rounded-5 border text-muted tx-14"><i class="fe fe-edit"></i></a>
+																<a href="javascript:void(0)" class="btn btn-sm btn-def py-2 rounded-5 border text-muted tx-14"><i class="fe fe-trash"></i></a>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /row -->
+				   </div>
+					<!-- /container -->
+
+        {% endblock %}
+
+    {% block scripts %}
+
+		<!--- Chart bundle min js -->
+		<script src="{% static 'assets/plugins/chart.js/Chart.bundle.min.js'%}"></script>
+
+		<!-- JQuery sparkline js -->
+		<script src="{% static 'assets/plugins/jquery-sparkline/jquery.sparkline.min.js'%}"></script>
+
+		<!--- Internal Sampledata js -->
+		<script src="{% static 'assets/js/chart.flot.sampledata.js'%}"></script>
+
+		<!-- Moment js -->
+		<script src="{% static 'assets/plugins/moment/moment.js'%}"></script>
+
+		<!-- ApexChart -->
+		<script src="{% static 'assets/js/apexcharts.min.js'%}"></script>
+
+		<!--- Internal Vector-maps js -->
+		<script src="{% static 'assets/plugins/jqvmap/jquery.vmap.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/jqvmap/maps/jquery.vmap.world.js'%}"></script>
+
+		<!--- Index js -->
+		<script src="{% static 'assets/js/index5.js'%}"></script>
+
+    {% endblock %}

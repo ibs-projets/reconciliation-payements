@@ -1,0 +1,45 @@
+
+
+
+/* ###### List   ###### */
+
+.main-list-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 0;
+  
+	+ .main-list-item {
+	  border-block-start: 1px solid $gray-200;
+	}
+  
+	&:last-child {
+	  padding-block-end: 0;
+	}
+  
+	h6 {
+	  margin-block-end: 2px;
+	  font-weight: 600;
+	}
+  
+	> div {
+	  &:first-child h6 {
+		color: $gray-900;
+	  }
+  
+	  span {
+		color: $secondary;
+		font-size: 12px;
+	  }
+  
+	  &:last-child {
+		text-align: end;
+  
+		h6 {
+		  line-height: 1;
+		}
+	  }
+	}
+  }
+
+  /* ###### List End   ###### */

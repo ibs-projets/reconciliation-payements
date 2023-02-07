@@ -1,0 +1,640 @@
+/* ###### Table ###### */
+
+.table {
+  color: $gray-800;
+
+  thead {
+    th,
+    td {
+      color: #37374e;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      border-bottom-width: 1px;
+      border-top-width: 0;
+      padding: 12px 15px;
+    }
+  }
+
+  tbody tr {
+    background-color: $white-9;
+
+    th {
+      font-weight: 500;
+    }
+  }
+
+  th,
+  td {
+    padding: 12px 15px;
+    line-height: 1.462 !important;
+  }
+}
+
+.table > :not(:last-child) > :last-child > * {
+  border-block-end: $gray-200;
+}
+
+.table-striped tbody tr:nth-of-type(2n + 1) {
+  background-color: rgba(238, 238, 247, 0.5);
+}
+
+.table-bordered thead {
+  th,
+  td {
+    border-top-width: 1px;
+    padding-block-start: 7px;
+    padding-block-end: 7px;
+    background-color: $white-5;
+  }
+}
+
+.table {
+  margin-block-end: 1rem;
+  color: $default-color;
+
+  th,
+  td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-block-start: 1px solid $border;
+  }
+
+  thead th {
+    vertical-align: bottom;
+  }
+
+  tbody + tbody {
+    border-block-start: 2px solid $border;
+  }
+}
+
+.table-sm {
+  th,
+  td {
+    padding: 0.3rem;
+  }
+}
+
+.table-bordered {
+  border: 1px solid $border;
+
+  th,
+  td {
+    border: 1px solid $border;
+  }
+}
+
+.table-borderless {
+  th,
+  td,
+  thead th,
+  tbody + tbody {
+    border: 0;
+  }
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: $white;
+}
+
+.table-hover tbody tr:hover {
+  color: $default-color;
+  background-color: #f8f7fd;
+}
+
+.table.dataTable.no-footer {
+  border-block-end: 1px solid $border !important;
+}
+
+@media (max-width: 575.98px) {
+  .table-responsive-sm {
+    display: block;
+    width: 100%;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+
+    > .table-bordered {
+      border: 0;
+    }
+  }
+	.next, .prev {
+	    width: inherit !important;
+	    height: inherit !important;
+   }
+}
+
+@media (max-width: 767.98px) {
+  .table-responsive-md {
+    display: block;
+    width: 100%;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+
+    > .table-bordered {
+      border: 0;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .table-responsive-lg {
+    display: block;
+    width: 100%;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+
+    > .table-bordered {
+      border: 0;
+    }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .table-responsive-xl {
+    display: block;
+    width: 100%;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+
+    > .table-bordered {
+      border: 0;
+    }
+  }
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  > .table-bordered {
+    border: 0;
+  }
+}
+
+@media print {
+  .table {
+    border-collapse: collapse !important;
+
+    td,
+    th {
+      background-color: $white !important;
+    }
+  }
+
+  .table-bordered {
+    th,
+    td {
+      border: 1px solid $border !important;
+    }
+  }
+
+  .table-dark {
+    color: inherit;
+
+    th,
+    td,
+    thead th,
+    tbody + tbody {
+      border-color: $gray-300;
+    }
+  }
+
+  .table .thead-dark th {
+    color: inherit;
+    border-color: $gray-300;
+  }
+}
+.dt-buttons.btn-group {
+  position: absolute;
+  // top: 0;
+  inset-inline-start: 185px;
+}
+.dt-button.dropdown-item.buttons-columnVisibility {
+  padding: 8px 49px;
+}
+.btn-primary.data-table-btn {
+  position: absolute;
+  inset-inline-start: 185px;
+  z-index: 9;
+}
+@media (max-width: 1363px) {
+  .dt-buttons.btn-group {
+    position: relative;
+    top: 0;
+    inset-inline-start: 0;
+  }
+}
+.table > :not(:first-child) {
+  border-block-start: 0px solid transparent;
+}
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-accent-bg: $background;
+  color: $default-color;
+}
+.table.dtr-details {
+  border: 1px solid $border;
+}
+.product-details {
+  .table-bordered > :not(caption) > * {
+    border-block-end: 1px solid $border;
+  }
+}
+.country-table {
+  &.table-responsive > .table-bordered {
+    border: 1px solid $border;
+  }
+}
+.table {
+  --bs-table-hover-bg: transparent;
+}
+.dataTables_paginate .pagination .page-link {
+    padding: 0.5rem 0.75rem;
+    //background-color: #ecf0fa;
+   // border: 1px solid #cdd7ef;
+}
+@media (max-width: 578px){
+	.btn-primary.data-table-btn {
+	    position: relative;
+	    inset-inline-start: 0;
+	}
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 1px;
+    transition: all 0.2s ease-in-out;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled {
+    background-color: transparent;
+    color: #d0d7e8 !important;
+}
+  .table-active {
+	background-color: rgba(0, 0, 0, 0.075);
+  
+	> {
+	  th, td {
+		background-color: rgba(0, 0, 0, 0.075);
+	  }
+	}
+  }
+  
+  .table-hover .table-active:hover {
+	background-color: rgba(0, 0, 0, 0.075);
+  
+	> {
+	  td, th {
+		background-color: rgba(0, 0, 0, 0.075);
+	  }
+	}
+  }
+  
+  .table {
+	.thead-dark th {
+	  color: $white;
+	  background-color: $gray-800;
+	  border-color: #49597b;
+	}
+  
+	.thead-light th {
+	  color: $gray-700;
+	  background-color: $gray-200;
+	  border-color: $gray-200;
+	}
+  }
+  
+  .table-dark {
+	color: $white;
+	background-color: $gray-800;
+  
+	th, td, thead th {
+	  border-color: #49597b;
+	}
+  
+	&.table-bordered {
+	  border: 0;
+	}
+  
+	&.table-striped tbody tr:nth-of-type(odd) {
+	  background-color: $white-05;
+	}
+  
+	&.table-hover tbody tr:hover {
+	  color: $white;
+	  background-color: $white-75;
+	}
+  }
+  
+  @media (max-width: 575.98px) {
+	.table-responsive-sm {
+	  display: block;
+	  width: 100%;
+	  overflow-x: auto;
+	  -webkit-overflow-scrolling: touch;
+  
+	  > .table-bordered {
+		border: 0;
+	  }
+	}
+  }
+  
+  @media (max-width: 767.98px) {
+	.table-responsive-md {
+	  display: block;
+	  width: 100%;
+	  overflow-x: auto;
+	  -webkit-overflow-scrolling: touch;
+  
+	  > .table-bordered {
+		border: 0;
+	  }
+	}
+  }
+  
+  @media (max-width: 991.98px) {
+	.table-responsive-lg {
+	  display: block;
+	  width: 100%;
+	  overflow-x: auto;
+	  -webkit-overflow-scrolling: touch;
+  
+	  > .table-bordered {
+		border: 0;
+	  }
+	}
+  }
+  
+  @media (max-width: 1199.98px) {
+	.table-responsive-xl {
+	  display: block;
+	  width: 100%;
+	  overflow-x: auto;
+	  -webkit-overflow-scrolling: touch;
+  
+	  > .table-bordered {
+		border: 0;
+	  }
+	}
+  }
+  .table> :not(caption)>*>* {
+    background-color: transparent;
+  }
+  
+  .table-responsive {
+	display: block;
+	width: 100%;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+  
+	> .table-bordered {
+	  border: 0;
+	}
+  }
+  
+.table-primary {
+  background-color: $primary-03 !important;
+}
+
+.table-primary>th,
+.table-primary>td {
+  background-color:  $primary-03 !important;
+}
+
+.table-primary th,
+.table-primary td,
+.table-primary thead th,
+.table-primary tbody+tbody {
+  border-color: $primary-01 !important;
+}
+
+.table-primary.table> :not(:first-child) {
+  border-top: 1px solid  $primary-01 !important;
+}
+
+.table-primary thead th {
+  background: $primary !important;
+  color: $white !important;
+}
+
+.table-primary tbody tr {
+  background-color: transparent !important;
+}
+
+.table-hover .table-primary:hover {
+  background-color:  $primary-03 !important;
+}
+
+.table-hover .table-primary:hover>td,
+.table-hover .table-primary:hover>th {
+  background-color:  $primary-03 !important;
+}
+
+.table-secondary {
+  background-color: rgba(246, 107, 78, 0.3) !important;
+}
+
+.table-secondary>th,
+.table-secondary>td {
+  background-color: rgba(246, 107, 78, 0.3) !important;
+}
+
+.table-secondary th,
+.table-secondary td,
+.table-secondary thead th,
+.table-secondary tbody+tbody {
+  border-color: #f66b4e21 !important;
+}
+
+.table-secondary.table> :not(:first-child) {
+  border-top: 1px solid rgba(246, 107, 78, 0.1) !important;
+}
+
+.table-secondary thead th {
+  background: $secondary !important;
+  color: $white !important;
+}
+
+.table-secondary tbody tr {
+  background-color: transparent !important;
+}
+
+.table-hover .table-secondary:hover {
+  background-color: rgba(246, 107, 78, 0.3) !important;
+}
+
+.table-hover .table-secondary:hover>td,
+.table-hover .table-secondary:hover>th {
+  background-color: rgba(246, 107, 78, 0.3) !important;
+}
+
+.table-warning {
+  background-color: rgba(241, 211, 19, 0.3) !important;
+}
+
+.table-warning>th,
+.table-warning>td {
+  background-color: rgba(241, 211, 19, 0.3) !important;
+}
+
+.table-warning th,
+.table-warning td,
+.table-warning thead th,
+.table-warning tbody+tbody {
+  border-color: #ff990030 !important;
+}
+
+.table-warning.table> :not(:first-child) {
+  border-top: 1px solid rgba(241, 211, 19, 0.1) !important;
+}
+
+.table-warning thead th {
+  background: $warning !important;
+  color: $white !important;
+}
+
+.table-warning tbody tr {
+  background-color: transparent !important;
+}
+
+.table-hover .table-warning:hover {
+  background-color: rgba(241, 211, 19, 0.3) !important;
+}
+
+.table-hover .table-warning:hover>td,
+.table-hover .table-warning:hover>th {
+  background-color: rgba(241, 211, 19, 0.3) !important;
+}
+
+.table-info {
+  background-color: rgba(78, 194, 240, 0.3) !important;
+}
+
+.table-info>th,
+.table-info>td {
+  background-color: rgba(78, 194, 240, 0.3) !important;
+}
+
+.table-info th,
+.table-info td,
+.table-info thead th,
+.table-info tbody+tbody {
+  border-color: #00b7ff38 !important;
+}
+
+.table-info.table> :not(:first-child) {
+  border-top: 1px solid rgba(78, 194, 240, 0.1) !important;
+}
+
+.table-info thead th {
+  background: $info !important;
+  color: $white !important;
+}
+
+.table-info tbody tr {
+  background-color: transparent !important;
+}
+
+.table-hover .table-info:hover {
+  background-color: rgba(78, 194, 240, 0.3);
+}
+
+.table-hover .table-info:hover>td,
+.table-hover .table-info:hover>th {
+  background-color: rgba(78, 194, 240, 0.3);
+}
+
+.table-success {
+  background-color: rgba(33, 165, 68, 0.3) !important;
+}
+
+.table-success>th,
+.table-success>td {
+  background-color: rgba(33, 165, 68, 0.3) !important;
+}
+
+.table-success th,
+.table-success td,
+.table-success thead th,
+.table-success tbody+tbody {
+  border-color: #21a5442b !important;
+}
+
+.table-success.table> :not(:first-child) {
+  border-top: 1px solid rgba(33, 165, 68, 0.1) !important;
+}
+
+.table-success thead th {
+  background: $success !important;
+  color: $white !important;
+}
+
+.table-success tbody tr {
+  background-color: transparent !important;
+}
+
+.table-hover .table-success:hover {
+  background-color: rgba(33, 165, 68, 0.3) !important;
+}
+
+.table-hover .table-success:hover>td,
+.table-hover .table-success:hover>th {
+  background-color: rgba(33, 165, 68, 0.3) !important;
+}
+
+.table-danger {
+  background-color: rgba(243, 67, 67, 0.3) !important;
+}
+
+.table-danger>th,
+.table-danger>td {
+  background-color: rgba(243, 67, 67, 0.3) !important;
+}
+
+.table-danger th,
+.table-danger td,
+.table-danger thead th,
+.table-danger tbody+tbody {
+  border-color: #ff00001c !important;
+}
+
+.table-danger.table> :not(:first-child) {
+  border-top: 1px solid rgba(243, 67, 67, 0.1) !important;
+}
+
+.table-danger thead th {
+  background: $danger !important;
+  color: $white !important;
+}
+
+.table-danger tbody tr {
+  background-color: transparent !important;
+}
+
+.table-hover .table-danger:hover {
+  background-color: rgba(243, 67, 67, 0.3) !important;
+}
+
+.table-hover .table-danger:hover>td,
+.table-hover .table-danger:hover>th {
+  background-color: rgba(243, 67, 67, 0.3) !important;
+}
+.table > thead {
+    background: $gray-100;
+}
+// .table-striped tbody tr:nth-of-type(even) {
+//   background-color: #f6f6fb;
+// }
+#example3_wrapper #example3{
+  width: 100% !important;
+}
+// @media screen and (max-width: 767px){
+// div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+//   justify-content: start !important;
+// }
+// }
+/* ###### Table End ###### */

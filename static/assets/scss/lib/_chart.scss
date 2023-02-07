@@ -1,0 +1,113 @@
+
+
+
+/* ###### chart ###### */
+  .chart-wrapper {
+	position: relative;
+	margin-inline-start: -13px;
+	margin-inline-end: -13px;
+  }
+  
+  @media (min-width: 576px) {
+	.chart-wrapper {
+	  margin-inline-start: -10px;
+	  margin-inline-end: -15px;
+	}
+  }
+  
+  .morris-wrapper-demo {
+	height: 200px;
+	position: relative;
+	margin-inline-start: -15px;
+	margin-inline-end: -15px;
+  }
+  
+  @media (min-width: 576px) {
+	.morris-wrapper-demo {
+	  height: 300px;
+	}
+  }
+  
+  .morris-donut-wrapper-demo {
+	height: 200px;
+  }
+  
+  @media (min-width: 576px) {
+	.morris-donut-wrapper-demo {
+	  height: 250px;
+	}
+  }
+  
+  .chartjs-wrapper-demo {
+	height: 250px;
+  }
+  
+  @media (max-width: 330px) {
+	.chartjs-wrapper-demo {
+	  width: 290px;
+	}
+  }
+  
+  @media (min-width: 992px) {
+	.chartjs-wrapper-demo {
+	  height: 300px;
+	}
+  }
+  
+  .chartist-wrapper-demo {
+	height: 200px;
+  }
+  
+  @media (min-width: 768px) {
+	.chartist-wrapper-demo {
+	  height: 300px;
+	}
+  }
+  
+  .morris-hover.morris-default-style {
+	border-radius: 0;
+  }
+  .chart-circle-sm {
+      height: 4rem !important;
+      width: 4rem !important;
+      font-size: .8rem;
+}
+.chart-circle {
+    display: block;
+    height: 7rem;
+    width: 7rem;
+    position: relative;
+}
+  
+  .chart-circle canvas {
+      margin: 0 auto;
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+}
+.chart-circle-value {
+    position: absolute;
+    top: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    bottom: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    line-height: 1;
+}
+.c3-chart-arc text {
+    fill: #fff;
+    font-size: 13px;
+}
+.c3-circle {
+  fill: currentColor;
+}
+/* ###### chart End ###### */

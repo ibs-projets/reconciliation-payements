@@ -1,0 +1,111 @@
+
+
+/* ######  Pagination ###### */
+
+.page-item {
+	&:first-child .page-link {
+	  border-start-start-radius: 3px;
+	  border-start-end-radius: 0px;
+	  border-end-end-radius: 0px;
+	  border-end-start-radius: 3px;
+	  
+	 //padding-inline: 15px;
+	}
+
+	&:last-child .page-link {
+		border-start-start-radius: 0px;
+		border-start-end-radius: 3px;
+		border-end-end-radius: 3px;
+		border-end-start-radius: 0px;
+	}
+  
+	+ .page-item {
+	  margin-inline-start: 1px;
+	}
+  
+	&.active .page-link {
+	  background-color: $primary;
+	}
+  }
+  
+  .page-link {
+	color: $gray-700;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	border-width: 0;
+	background-color: $gray-100;
+	margin-inline-start: 0;
+	font-weight: 500;
+	padding:1.0rem 1.3rem;
+	border: 1px solid $border;
+  
+	i {
+	  font-size: 18px;
+	  line-height: 0;
+	}
+  
+	&:hover, &:focus {
+	  color: $gray-900;
+	  background-color: $gray-300;
+	}
+  }
+  
+  .pagination-dark {
+	.page-item.active .page-link {
+	  background-color: $primary;
+	  color: $white;
+	}
+  
+	.page-link {
+	  font-weight: 400;
+	  background-color: $white-05;
+	  color: $white-8;
+	  border-color:#5a5a6c;
+  
+	  &:hover, &:focus {
+		color: $white;
+		background-color: $white-08;
+	  }
+	}
+  }
+  
+  .pagination-primary .page-item.active .page-link {
+	background-color: $primary;
+  }
+  
+  .pagination-success .page-item.active .page-link {
+	background-color: $success;
+	border-color:$success;
+  }
+  
+  .pagination-circled {
+	.page-item {
+	  + .page-item {
+		margin-inline-start: 5px;
+	  }
+  
+	  &:first-child .page-link, &:last-child .page-link {
+		border-radius: 100% !important;
+	  }
+	}
+  
+	.page-link {
+	  padding: 0;
+	  width: 30px;
+	  border-radius: 100%;
+	}
+  }
+  
+ .page-item:not(:first-child) .page-link{
+	border-inline-start:0px;
+  }
+  @media (max-width: 370px) {
+	.pagination-dark .page-link {
+	   padding: 1rem;
+	}
+ }
+  /* ######  Pagination End ###### */

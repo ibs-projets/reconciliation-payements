@@ -1,0 +1,233 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project        :   Adminor -  Dashboard Template
+Version        :   V.3
+Create Date    :   23/04/2021
+Copyright      :   Spruko Technologies Private Limited 
+Author         :   Spruko
+Author URL     :   https://themeforest.net/user/spruko
+License        :   Licensed under ThemeForest License
+
+-------------------------------------------------------------------*/
+
+@import "variables";
+
+/*
+1. bootstrap-custom
+2. accordions
+3. alerts
+4. badge
+5. breadcrumbs
+6. buttons
+7. card
+8. dropdown
+9. forms
+10. grid
+11. input-group
+12. modal
+13. nav
+14. pagination
+15. panel
+16. popover
+17. progress
+18. tables
+19. toast
+20. tooltip
+21. carousel
+22. ckbox
+23. count-down
+24. custom-styles
+25. ecommerce
+26. files
+27. image
+28. list
+29. landing
+30. navbar
+31. pricing
+32. rating
+33. rdiobox
+34. sidebar
+35. tags
+36. timeline
+37. wizard
+38. footer
+39. horizontal-menu
+40. menu-styles
+41. header-styles
+42. icon-bar
+43. landing
+44. main-content
+45. main-header
+46. style-dark
+47. main-profile
+48. default-menu
+49. switcher-styles
+50. rtl
+51. chart
+52. data-table
+53. date-picker
+54. datetimepicker
+55. jquery-steps
+56. jqvmap
+57. parsely
+58. rangeslider
+59. select2
+60. spectrum
+61. calendar
+62. chat
+63. contact
+64. error
+65. invoice
+66. mail
+67. profile
+68. background
+69. border
+70. height
+71. margin
+72. opacity
+73. padding
+74. position
+75. typography
+76. width
+*/
+
+@import "custom/fonts/fonts";
+
+/* ###### bootstrap ####### */
+@import "bootstrap/bootstrap-custom";
+@import "bootstrap/accordions";
+@import "bootstrap/alerts";
+@import "bootstrap/badge";
+@import "bootstrap/breadcrumbs";
+@import "bootstrap/buttons";
+@import "bootstrap/card";
+@import "bootstrap/dropdown";
+@import "bootstrap/forms";
+@import "bootstrap/grid";
+@import "bootstrap/input-group";
+@import "bootstrap/modal";
+@import "bootstrap/nav";
+@import "bootstrap/pagination";
+@import "bootstrap/panel";
+@import "bootstrap/popover";
+@import "bootstrap/progress";
+@import "bootstrap/tables";
+@import "bootstrap/toast";
+@import "bootstrap/tooltip";
+
+
+/* ###### custom ####### */
+
+@import "custom/carousel";
+@import "custom/ckbox";
+@import "custom/count-down";
+@import "custom/custom-styles";
+@import "custom/ecommerce";
+@import "custom/files";
+@import "custom/image";
+@import "custom/list";
+@import "custom/landing";
+@import "custom/navbar";
+@import "custom/pricing";
+@import "custom/rating";
+@import "custom/rdiobox";
+@import "custom/sidebar";
+@import "custom/tags";
+@import "custom/timeline";
+@import "custom/wizard";
+
+
+/* ###### layout ####### */
+
+@import "layout/footer";
+@import "layout/horizontal-menu";
+@import "layout/double-menu-styles";
+@import "layout/menu-styles";
+@import "layout/header-styles";
+@import "layout/icon-bar";
+@import "layout/main-content";
+@import "layout/main-header";
+@import "layout/style-dark";
+@import "layout/main-profile";
+@import "layout/default-menu";
+@import "layout/switcher-styles";
+@import "layout/rtl";
+
+
+/* ###### lib ####### */
+
+@import "lib/chart";
+@import "lib/data-table";
+@import "lib/date-picker";
+@import "lib/datetimepicker";
+@import "lib/jquery-steps";
+@import "lib/jqvmap";
+@import "lib/parsely";
+@import "lib/rangeslider";
+@import "lib/select2";
+@import "lib/spectrum";
+
+
+/* ###### template ####### */
+
+@import "template/calendar";
+@import "template/chat";
+@import "template/contact";
+@import "template/error";
+@import "template/invoice";
+@import "template/mail";
+@import "template/profile";
+
+
+
+/* ######  util ###### */
+
+@import "util/background";
+@import "util/border";
+@import "util/height";
+@import "util/margin";
+@import "util/opacity";
+@import "util/padding";
+@import "util/position";
+@import "util/typography";
+@import "util/width";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

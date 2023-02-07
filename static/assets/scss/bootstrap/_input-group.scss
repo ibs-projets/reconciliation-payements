@@ -1,0 +1,42 @@
+
+
+
+/* ###### Input Group ###### */
+
+.input-group-prepend, .input-group-append {
+	border-radius: 0;
+  }
+  
+  .input-group-text {
+	padding-block-start: 0;
+	padding-block-end: 0;
+	align-items: center;
+	border-radius: 3px;
+  }
+  .input-icon {
+      position: relative;
+}
+.input-icon-addon {
+      position: absolute;
+       top: 0;
+       bottom: 0;
+       inset-inline-end: 0;
+       display: -ms-flexbox;
+       display: flex;
+       -ms-flex-align: center;
+       align-items: center;
+       -ms-flex-pack: center;
+       justify-content: center;
+       min-width: 2.5rem;
+    pointer-events: none;
+    color: $white
+}
+.form-control.header-search {
+    background: $white-1 !important;
+    border: 1px solid $white-1 !important;
+    border-radius: 20px !important;
+    color:$white;
+    padding: 0.35rem 0.75rem;
+    width: 100%;
+}
+/* ###### Input Group End ###### */

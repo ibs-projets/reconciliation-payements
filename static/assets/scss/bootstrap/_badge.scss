@@ -1,0 +1,132 @@
+
+
+/* ######  Badges  ###### */
+
+.badge {
+    font-size: 10px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    padding: 3px 5px 4px;
+  }
+  
+  .bg-light {
+    background-color: $gray-300;
+  }
+  
+  .bg-pill {
+    padding-inline-start: 8px;
+    padding-inline-end: 8px;
+  }
+  
+  /*////////////////////badgelight//////////////////*/
+  
+  .bg-primary-transparent {
+    color: $primary;
+    background-color: rgb(217, 232, 254);
+  }
+  
+  .bg-success-transparent {
+    background-color: rgb(212, 242, 225) !important;
+    color: $success;
+  }
+  
+  .bg-teal-transparent {
+    background-color: #d2f5f5 !important;
+    color: $teal;
+  }
+  
+  .bg-warning-transparent {
+    background-color: rgba(255, 193, 7, 0.15) !important;
+    color: #ffc107;
+  }
+  
+  .bg-danger-transparent {
+    color: $danger;
+    background-color: #f9e2e2;
+  }
+  
+  .bg-purple-transparent {
+    color: $purple;
+    background-color: #e1defe;
+  }
+  
+  .bg-info-transparent {
+    color: $info;
+    background-color: rgba(3, 85, 208, 0.1);
+  }
+  
+  .bg-pink-transparent {
+    color: $pink;
+    background-color: rgb(254, 229, 241);
+  }
+  .btn-outline-primary:hover .badge {
+      background-color: $white-9 !important;
+       color: $default-color !important;
+}
+  .btn-outline-secondary:hover .badge.bg-secondary {
+      background: $white-9 !important;
+       color: $default-color !important;
+}
+  .btn-outline-success:hover .badge.bg-success {
+      background: $white-9 !important;
+       color: $default-color !important;
+}
+  .btn-outline-warning:hover .badge.bg-warning {
+      background: $white-9 !important;
+       color: $default-color !important;
+}
+  .btn-outline-info:hover .badge.bg-info {
+      background: $white-9 !important;
+       color: $default-color !important;
+}
+  .btn-outline-danger:hover .badge.bg-danger {
+      background: $white-9 !important;
+       color: $default-color !important;
+}
+
+.badge {
+   display: inline-block;
+    padding: 3px 6px 4px;
+    font-size: 10px;
+    font-weight: 500 !important;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    border-radius: 3px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+	.badge {
+	  transition: none;
+	}
+  }
+  
+  a.badge {
+	&:hover, &:focus {
+	  text-decoration: none;
+	}
+  }
+  
+  .badge:empty {
+	display: none;
+  }
+  
+  .btn .badge, .sp-container button .badge {
+	position: relative;
+	top: -1px;
+  }
+  
+  .bg-pill {
+	padding-inline-end: 0.6em;
+	padding-inline-start: 0.6em;
+	border-radius: 10rem;
+  }
+
+  .list-group .list-group-item .badgetext {
+    float: var(--float-right);
+  }
+
+/* ######  Badges End  ###### */
