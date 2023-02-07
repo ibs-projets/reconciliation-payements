@@ -1,0 +1,293 @@
+{% extends 'reconciliation/components/base.html' %}
+{% load static %}
+
+    {% block styles %}
+
+    {% endblock %}
+    
+        {% block content %}
+        
+					<!-- breadcrumb -->
+					<div class="breadcrumb-header justify-content-between">
+						<div>
+							<h4 class="content-title mb-2">Badges</h4>
+						</div>
+						<div class="d-flex my-auto">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="javascript:void(0);">Elements</a></li>
+									<li class="breadcrumb-item active " aria-current="page">Badges</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+					<!-- /breadcrumb -->
+
+					<!-- Row -->
+					<div class="row">
+						<div class="col-lg-6 col-md-12">
+							<div class="card mg-b-20" id="badge2">
+								<div class="card-header">
+									<h3 class="card-title">BADGES</h3>
+								</div>
+								<div class="card-body">
+									<div class="text-wrap">
+										<div class="example">
+											<span class="badge bg-primary">Primary</span>
+											<span class="badge bg-secondary">Secondary</span>
+											<span class="badge bg-success">Success</span>
+											<span class="badge bg-danger">Danger</span>
+											<span class="badge bg-warning">Warning</span>
+											<span class="badge bg-info">Info</span>
+											<span class="badge bg-light">Light</span>
+											<span class="badge bg-dark">Dark</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-6 col-md-12">
+							<div class="card mg-b-20">
+								<div class="card-header">
+									<h3 class="card-title">Pill Badges</h3>
+								</div>
+								<div class="card-body">
+									<div class="text-wrap">
+										<div class="example">
+											<span class="badge bg-pill bg-primary">Primary</span>
+											<span class="badge bg-pill bg-secondary">Secondary</span>
+											<span class="badge bg-pill bg-success">Success</span>
+											<span class="badge bg-pill bg-danger">Danger</span>
+											<span class="badge bg-pill bg-warning">Warning</span>
+											<span class="badge bg-pill bg-info">Info</span>
+											<span class="badge bg-pill bg-light">Light</span>
+											<span class="badge bg-pill bg-dark">Dark</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-6 col-md-12">
+							<div class="card mg-b-20" id="badge3">
+								<div class="card-header">
+									<h3 class="card-title">Light-background Badges</h3>
+								</div>
+								<div class="card-body">
+									<div class="text-wrap">
+										<div class="example">
+											<span class="badge bg-pill bg-primary-transparent">Primary</span>
+											<span class="badge bg-pill bg-secondary-transparent">Secondary</span>
+											<span class="badge bg-pill bg-success-transparent">Success</span>
+											<span class="badge bg-pill bg-danger-transparent">Danger</span>
+											<span class="badge bg-pill bg-warning-transparent">Warning</span>
+											<span class="badge bg-pill bg-info-transparent">Info</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-6 col-md-12">
+							<div class="card mg-b-20" >
+								<div class="card-header">
+									<h3 class="card-title">LInk Badges</h3>
+								</div>
+								<div class="card-body">
+									<div class="text-wrap">
+										<div class="example">
+											<a class="badge bg-primary"   href="javascript:void(0);">Primary</a>
+											<a class="badge bg-secondary"   href="javascript:void(0);">Secondary</a>
+											<a class="badge bg-success"   href="javascript:void(0);">Success</a>
+											<a class="badge bg-danger"   href="javascript:void(0);">Danger</a>
+											<a class="badge bg-warning"   href="javascript:void(0);">Warning</a>
+											<a class="badge bg-info"   href="javascript:void(0);">Info</a>
+											<a class="badge bg-light"   href="javascript:void(0);">Light</a>
+											<a class="badge bg-dark"   href="javascript:void(0);">Dark</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12 col-md-12">
+							<div class="card mg-b-20">
+								<div class="card-header">
+									<h3 class="card-title">Link Badges</h3>
+								</div>
+								<div class="card-body">
+									<div class="text-wrap">
+										<div class="example">
+											<button type="button" class="btn btn-primary mt-1 mb-1">Primary <span class="badge bg-light">22</span></button>
+											<button type="button" class="btn btn-success mt-1 mb-1">Success <span class="badge bg-light">New</span></button>
+											<button type="button" class="btn btn-info mt-1 mb-1">Info <span class="badge bg-light">5</span></button>
+											<button type="button" class="btn btn-warning mt-1 mb-1">Warning <span class="badge bg-light bg-pill"><i class="typcn typcn-input-checked-outline tx-14"></i></span></button>
+											<button type="button" class="btn btn-danger mt-1 mb-1">Danger <span class="badge bg-light bg-pill">Updated</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 col-lg-12">
+							<div class="card custom-card">
+								<div class="card-header">
+									<h3 class="card-title">Outline Buttons With Rounded Badges</h3>
+								</div>
+								<div class="card-body">
+									<div class="text-wrap">
+										<div class="example">
+											<div class="btn-list">
+												<button type="button" class="btn ripple btn-outline-primary">
+												Notifications <span class="badge bg-primary ms-2 rounded-pill">4</span>
+												</button>
+												<button type="button" class="btn ripple btn-outline-secondary">
+												Notifications <span class="badge bg-secondary ms-2 rounded-pill">78</span>
+												</button>
+												<button type="button" class="btn ripple btn-outline-success">
+												Notifications <span class="badge bg-success ms-2 rounded-pill">12</span>
+												</button>
+												<button type="button" class="btn ripple btn-outline-info">
+												Notifications <span class="badge bg-info ms-2 rounded-pill">67</span>
+												</button>
+												<button type="button" class="btn ripple btn-outline-danger">
+												Notifications <span class="badge bg-danger ms-2 rounded-pill">45</span>
+												</button>
+												<button type="button" class="btn ripple btn-outline-warning">
+												Notifications <span class="badge bg-warning ms-2 rounded-pill">120</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 col-lg-12">
+							<div class="card custom-card">
+								<div class="card-header">
+									<h3 class="card-title">Buttons With Rounded Badges</h3>
+								</div>
+								<div class="card-body">
+									<div class="text-wrap">
+										<div class="example">
+											<div class="btn-list">
+												<button type="button" class="btn ripple btn-primary">
+												Notifications <span class="badge bg-light ms-2 rounded-pill">4</span>
+												</button>
+												<button type="button" class="btn ripple btn-secondary">
+												Notifications <span class="badge bg-light ms-2 rounded-pill">78</span>
+												</button>
+												<button type="button" class="btn ripple btn-success">
+												Notifications <span class="badge bg-light ms-2 rounded-pill">12</span>
+												</button>
+												<button type="button" class="btn ripple btn-info">
+												Notifications <span class="badge bg-light ms-2 rounded-pill">67</span>
+												</button>
+												<button type="button" class="btn ripple btn-danger">
+												Notifications <span class="badge bg-light ms-2 rounded-pill">45</span>
+												</button>
+												<button type="button" class="btn ripple btn-warning">
+												Notifications <span class="badge bg-light ms-2 rounded-pill">120</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12 col-md-12">
+							<div class="card mg-b-20" id="badge5">
+								<div class="card-header">
+									<h3 class="card-title">Link Badges</h3>
+								</div>
+								<div class="card-body">
+									<div class="text-wrap">
+										<div class="example">
+											<div class="card-body ">
+												<div class="">
+													<button type="button" class="btn btn-primary position-relative me-5 mb-3"> Projects
+														<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">20+
+															<span class="visually-hidden">unread messages</span>
+														</span>
+													</button>
+													<button type="button" class="btn btn-secondary position-relative me-5 mb-3"> Projects
+														<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">20+
+															<span class="visually-hidden">unread messages</span>
+														</span>
+													</button>
+													<button type="button" class="btn btn-success position-relative me-5 mb-3"> Projects
+														<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">20+
+															<span class="visually-hidden">unread messages</span>
+														</span>
+													</button>
+													<button type="button" class="btn btn-info position-relative me-5 mb-3"> Projects
+														<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">20+
+															<span class="visually-hidden">unread messages</span>
+														</span>
+													</button>
+													<button type="button" class="btn btn-warning position-relative me-5 mb-3"> Projects
+														<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">20+
+															<span class="visually-hidden">unread messages</span>
+														</span>
+													</button>
+													<button type="button" class="btn btn-danger position-relative me-5 mb-3"> Projects
+														<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">20+
+															<span class="visually-hidden">unread messages</span>
+														</span>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-6 col-md-12">
+							<div class="card mg-b-20" id="badge">
+								<div class="card-header">
+									<h3 class="card-title">Simple Badges</h3>
+								</div>
+								<div class="card-body">
+									<div class="text-wrap">
+										<div class="example">
+											<h1>Heading 1 <span class="badge bg-light">New</span></h1>
+											<h2>Heading 2 <span class="badge bg-light">New</span></h2>
+											<h3>Heading 3 <span class="badge bg-light">New</span></h3>
+											<h4>Heading 4 <span class="badge bg-light">New</span></h4>
+											<h5>Heading 5 <span class="badge bg-light">New</span></h5>
+											<h6>Heading 6 <span class="badge bg-light">New</span></h6>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-12">
+							<div class="card mg-b-20" id="badge1">
+								<div class="card-header">
+									<h3 class="card-title">Colored Badges</h3>
+								</div>
+								<div class="card-body">
+									<div class="text-wrap">
+										<div class="example">
+											<h1 class="text-primary">Heading 1 <span class="badge bg-primary">New</span></h1>
+											<h2 class="text-danger">Heading 2 <span class="badge bg-danger">New</span></h2>
+											<h3 class="text-warning">Heading 3 <span class="badge bg-warning">New</span></h3>
+											<h4 class="text-success">Heading 4 <span class="badge bg-success">New</span></h4>
+											<h5 class="text-info">Heading 5 <span class="badge bg-info">New</span></h5>
+											<h6 class="text-secondary">Heading 6 <span class="badge bg-secondary">New</span></h6>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- /row -->
+
+        {% endblock %}
+
+    {% block scripts %}
+
+
+    {% endblock %}
