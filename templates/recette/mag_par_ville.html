@@ -1,0 +1,117 @@
+{% extends 'recette/recette_base.html' %}
+{% load static %}
+	{% block title %}SMART RECO - Type de magasin {{nomtypemag}} par ville{% endblock %}
+    {% block styles %}
+
+    {% endblock %}
+
+        {% block content %}
+
+					<!-- breadcrumb -->
+					<div class="breadcrumb-header justify-content-between">
+						<div>
+							<h4 class="content-title mb-2">Magasins</h4>
+						</div>
+						<div class="d-flex my-auto">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="javascript:void(0);">Magasins</a></li>
+									<li class="breadcrumb-item active " aria-current="page">{{nomtypemag}}</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+					<!-- /breadcrumb -->
+
+					<!-- main-content-body -->
+					<div class="main-content-body">
+						<div class="row row-sm">
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+								<div class="card ">
+									<div class="card-body">
+										<div class="card-widget">
+											<h6 class="mb-2">Total {{nomtypemag}}</h6>
+											<h2 class="text-end"><i class="mdi mdi-store icon-size float-start text-danger text-danger-shadow"></i><span>{{total_typemag}}</span></h2>
+											<p class="mb-0">Airtel Money<span class="float-end">3,756</span></p>
+											<p class="mb-0">Mobi Cash<span class="float-end">3,756</span></p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+								<div class="card ">
+									<div class="card-body">
+										<div class="card-widget">
+											<h6 class="mb-2">Nombre villes</h6>
+											<h2 class="text-end"><i class="mdi mdi-city icon-size float-start text-danger text-danger-shadow"></i><span>{{nb_villes}}</span></h2>
+											<p class="mb-0">Airtel Money<span class="float-end">3,756</span></p>
+											<p class="mb-0">Mobi Cash<span class="float-end">3,756</span></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xxl-3 col-xl-12 col-lg-12 col-md-12">
+								<div class="card">
+									<div class="card-header border-bottom-0">
+										<h3 class="card-title">{{nomtypemag}} par ville</h3>
+									</div>
+									<div class="border-0">
+										<table class="table mb-0 card-table table-vcenter text-nowrap">
+											<tbody>
+												{% for v in nb_type_mag %}
+													<tr>
+													<td class="no-border">
+														{% if v.magasins__ville__nom_ville == None %}
+															Aucune province
+														{% else %}
+															{{v.magasins__ville__nom_ville}}
+														{% endif %}
+													</td>
+													<td class="no-border text-end"><a href="{% url 'reco_gest:type_mag_dans_ville' nomtypemag  v.magasins__ville__nom_ville %}"><span class="btn btn-primary btn-sm">{{v.nb_ville}}</span></a></td>
+												</tr>
+												{% endfor %}
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /row -->
+
+        {% endblock %}
+
+    {% block scripts %}
+
+		<!--- DATEPICKER JS -->
+		<script src="{% static 'assets/plugins/jquery-ui/ui/widgets/datepicker.js'%}"></script>
+
+		<!--- INTERNAL SAMPLEDATA JS -->
+		<script src="{% static 'assets/js/chart.flot.sampledata.js'%}"></script>
+
+		<!-- APEXCHART JS -->
+		<script src="{% static 'assets/js/apexcharts.min.js'%}"></script>
+
+		<!-- CIRCLE PROGRESS -->
+		<script src="{% static 'assets/js/vendors/circle-progress.min.js'%}"></script>
+
+		<!--- INDEX3 js -->
+		<script src="{% static 'assets/js/index3.js'%}"></script>
+
+		<script src="{% static 'assets/plugins/datatable/js/jquery.dataTables.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/dataTables.bootstrap5.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/dataTables.buttons.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/buttons.bootstrap5.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/jszip.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/pdfmake/pdfmake.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/pdfmake/vfs_fonts.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/buttons.html5.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/buttons.print.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/buttons.colVis.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/dataTables.responsive.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/responsive.bootstrap5.min.js'%}"></script>
+		<script src="{% static 'assets/js/table-data.js'%}"></script>
+
+    {% endblock %}

@@ -1,0 +1,160 @@
+{% extends 'recette/recette_base.html' %}
+{% load static %}
+	{% block title %}SMART RECO - Tableau de bord{% endblock %}
+    {% block styles %}
+
+    {% endblock %}
+    
+        {% block content %}
+        
+					<!-- breadcrumb -->
+					<div class="breadcrumb-header justify-content-between">
+						<div>
+							<h4 class="content-title mb-2">Tableau de bord</h4>
+						</div>
+						<div class="d-flex my-auto">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="javascript:void(0);">Recettes</a></li>
+									<li class="breadcrumb-item active " aria-current="page">Tableau de bord</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+					<!-- /breadcrumb -->
+
+					<!-- main-content-body -->
+					<div class="main-content-body">
+						<!--
+						<div class="row row-sm">
+							{% for t in typemags %}
+								<div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+									<div class="card ">
+										<a href="{% url 'reco_gest:magasin_par_province' t.libelle %}">
+											<div class="card-body">
+											<div class="card-widget">
+												<h6 class="mb-2">{{t.libelle}}</h6>
+												<h2 class="text-end"><i class="fa fa-cart-plus icon-size float-start text-danger text-danger-shadow"></i><span>46,486</span></h2>
+												<p class="mb-0">Airtel Money<span class="float-end">3,756</span></p>
+												<p class="mb-0">Mobi Cash<span class="float-end">3,756</span></p>
+											</div>
+										</div>
+										</a>
+									</div>
+							{% endfor %}
+						</div>
+						-->
+						<div class="col-lg-8 col-xl-12">
+                            <div class="row row-sm">
+						<div class="col-xl-4 col-lg-6 col-sm-4 col-md-4">
+							<a href="{% url 'reco_gest:recette_airtel' %}">
+								<div class="card text-center">
+								<div class="card-body ">
+									<div class="feature widget-2 text-center mt-0 mb-3">
+										<i class="ti-shopping-cart project bg-primary-transparent mx-auto text-primary "></i>
+									</div>
+									<h6 class="mb-1 text-muted">Airtel</h6>
+									<h3 class="font-weight-semibold">Airtel Money</h3>
+								</div>
+							</div>
+							</a>
+						</div>
+						<div class="col-xl-4 col-lg-6 col-sm-4 col-md-4">
+							<a href="{% url 'reco_gest:recette_moov' %}">
+								<div class="card text-center">
+								<div class="card-body ">
+									<div class="feature widget-2 text-center mt-0 mb-3">
+										<i class="ti-shopping-cart project bg-pink-transparent mx-auto text-pink "></i>
+									</div>
+									<h6 class="mb-1 text-muted">Moov</h6>
+									<h3 class="font-weight-semibold">Moov Money</h3>
+								</div>
+							</div>
+							</a>
+						</div>
+						<div class="col-xl-4 col-lg-6 col-sm-4 col-md-4">
+							<div class="card text-center">
+								<div class="card-body">
+									<div class="feature widget-2 text-center mt-0 mb-3">
+										<i class="ti-shopping-cart  project bg-teal-transparent mx-auto text-teal "></i>
+									</div>
+									<h6 class="mb-1 text-muted">Total</h6>
+									<h3 class="font-weight-semibold">Recettes totales</h3>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
+							<a href="{% url 'reco_gest:recette_par_magasin' %}">
+								<div class="card text-center">
+								<div class="card-body ">
+									<div class="feature widget-2 text-center mt-0 mb-3">
+										<i class="ti-shopping-cart project bg-success-transparent mx-auto text-success "></i>
+									</div>
+									<h6 class="mb-1 text-muted">Par magasin</h6>
+									<h3 class="font-weight-semibold">Par Magasin</h3>
+								</div>
+							</div>
+							</a>
+						</div>
+						<div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
+							<div class="card text-center">
+								<div class="card-body ">
+									<div class="feature widget-2 text-center mt-0 mb-3">
+										<i class="ti-shopping-cart project bg-success-transparent mx-auto text-success "></i>
+									</div>
+									<h6 class="mb-1 text-muted">Par province</h6>
+									<h3 class="font-weight-semibold">Par Province</h3>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
+							<div class="card text-center">
+								<div class="card-body ">
+									<div class="feature widget-2 text-center mt-0 mb-3">
+										<i class="ti-shopping-cart project bg-success-transparent mx-auto text-success "></i>
+									</div>
+									<h6 class="mb-1 text-muted">Par ville</h6>
+									<h3 class="font-weight-semibold">Par Ville</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+                        </div>
+						<!-- End Row -->
+					</div>
+					<!-- /row -->
+
+        {% endblock %}
+
+    {% block scripts %}
+
+		<!--- DATEPICKER JS -->
+		<script src="{% static 'assets/plugins/jquery-ui/ui/widgets/datepicker.js'%}"></script>
+
+		<!--- INTERNAL SAMPLEDATA JS -->
+		<script src="{% static 'assets/js/chart.flot.sampledata.js'%}"></script>
+
+		<!-- APEXCHART JS -->
+		<script src="{% static 'assets/js/apexcharts.min.js'%}"></script>
+
+		<!-- CIRCLE PROGRESS -->
+		<script src="{% static 'assets/js/vendors/circle-progress.min.js'%}"></script>
+		
+		<!--- INDEX3 js -->
+		<script src="{% static 'assets/js/index3.js'%}"></script>
+
+		<script src="{% static 'assets/plugins/datatable/js/jquery.dataTables.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/dataTables.bootstrap5.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/dataTables.buttons.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/buttons.bootstrap5.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/jszip.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/pdfmake/pdfmake.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/pdfmake/vfs_fonts.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/buttons.html5.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/buttons.print.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/buttons.colVis.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/dataTables.responsive.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/responsive.bootstrap5.min.js'%}"></script>
+		<script src="{% static 'assets/js/table-data.js'%}"></script>
+
+    {% endblock %}

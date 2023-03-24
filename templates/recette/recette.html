@@ -1,0 +1,130 @@
+{% extends 'recette/recette_base.html' %}
+{% load static %}
+
+    {% block styles %}
+
+    {% endblock %}
+	{% block title %}SMART RECO - Toutes les recettes{% endblock %}
+        {% block content %}
+					<!-- breadcrumb -->
+					<div class="breadcrumb-header justify-content-between">
+						<div>
+							<h4 class="content-title mb-2">Recettes</h4>
+						</div>
+						<div class="d-flex my-auto">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="javascript:void(0);">Recette</a></li>
+									<li class="breadcrumb-item active " aria-current="page">Dashboard recettes</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+					<!-- /breadcrumb -->
+
+                    <!-- row -->
+                    <div class="row">
+						<div class="col-lg-4 col-xl-3">
+							<div class="card custom-card">
+                                <div class="card-header">
+                                    <div class="card-title">Dashboard</div>
+                                </div>
+								<div class="main-content-left main-content-left-mail card-body pt-0 ">
+									<div class="main-settings-menu">
+										<nav class="nav main-nav-column">
+											<a class="nav-link thumb active mb-2" href="javascript:void(0);">
+												<div class="d-flex align-items-center">
+													<i class="fe fe-home"></i>
+													<p class="mb-0 mt-1">Toutes les recettes</p>
+												</div>
+											</a>
+											<a class="nav-link border-top-0 thumb mb-2" href="javascript:void(0);">
+												<div class="d-flex align-items-center">
+													<i class="fe fe-grid"></i>
+													<p class="mb-0">Airtel Money</p>
+												</div>
+											</a>
+											<a class="nav-link border-top-0 thumb mb-2" href="javascript:void(0);">
+												<div class="d-flex align-items-center">
+													<i class="fe fe-grid"></i>
+													<p class="mb-0">Mobi Cash</p>
+												</div>
+											</a>
+											<a class="nav-link border-top-0 thumb mb-2" href="javascript:void(0);">
+												<div class="d-flex align-items-center">
+													<i class="fe fe-grid"></i>
+													<p class="mb-0">Recette totales</p>
+												</div>
+											</a>
+											<a class="nav-link border-top-0 thumb mb-2" href="javascript:void(0);">
+												<div class="d-flex align-items-center">
+													<i class="fe fe-grid"></i>
+													<p class="mb-0">Par Magasins</p>
+												</div>
+											</a>
+										</nav>
+									</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-xl-9">
+                            <div class="row row-sm">
+						<div class="col-xl-6 col-lg-6 col-sm-6 col-md-6">
+							<a href="{% url 'reco_gest:recette_airtel' %}">
+								<div class="card text-center">
+								<div class="card-body ">
+									<div class="feature widget-2 text-center mt-0 mb-3">
+										<i class="ti-shopping-cart project bg-primary-transparent mx-auto text-primary "></i>
+									</div>
+									<h6 class="mb-1 text-muted">Airtel</h6>
+									<h3 class="font-weight-semibold">Airtel Money</h3>
+								</div>
+							</div>
+							</a>
+						</div>
+						<div class="col-xl-6 col-lg-6 col-sm-6 col-md-6">
+							<a href="{% url 'reco_gest:recette_moov' %}">
+								<div class="card text-center">
+								<div class="card-body ">
+									<div class="feature widget-2 text-center mt-0 mb-3">
+										<i class="ti-shopping-cart project bg-pink-transparent mx-auto text-pink "></i>
+									</div>
+									<h6 class="mb-1 text-muted">Mobi Cash</h6>
+									<h3 class="font-weight-semibold">Mobi Cash</h3>
+								</div>
+							</div>
+							</a>
+						</div>
+						<div class="col-xl-6 col-lg-6 col-sm-6 col-md-6">
+							<div class="card text-center">
+								<div class="card-body">
+									<div class="feature widget-2 text-center mt-0 mb-3">
+										<i class="ti-shopping-cart  project bg-teal-transparent mx-auto text-teal "></i>
+									</div>
+									<h6 class="mb-1 text-muted">Total Profit</h6>
+									<h3 class="font-weight-semibold">Recettes totales</h3>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-6 col-sm-6 col-md-6">
+							<div class="card text-center">
+								<div class="card-body ">
+									<div class="feature widget-2 text-center mt-0 mb-3">
+										<i class="ti-shopping-cart project bg-success-transparent mx-auto text-success "></i>
+									</div>
+									<h6 class="mb-1 text-muted">Total Investiment</h6>
+									<h3 class="font-weight-semibold">Par Magasins</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+                        </div>
+                    </div>
+                    <!--/ row -->
+
+        {% endblock %}
+
+    {% block scripts %}
+
+
+    {% endblock %}

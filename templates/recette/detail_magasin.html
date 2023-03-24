@@ -1,0 +1,365 @@
+{% extends 'recette/recette_base.html' %}
+{% load static %}
+{% block title %}SMART RECO - detail du magasin {{magasin.nom_magasin}}{% endblock %}
+{% block styles %}
+
+{% endblock %}
+
+{% block content %}
+
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+    <div>
+        <h4 class="content-title mb-2">{{magasin.nom_magasin}}</h4>
+    </div>
+    <div class="d-flex my-auto">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0);">Magasin</a></li>
+                <li class="breadcrumb-item active " aria-current="page">Détail magasin {{magasin.nom_magasin}}</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- /breadcrumb -->
+
+<!-- row -->
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-xl-4">
+        <div class="card custom-card">
+            <div class="card-body text-center">
+                <div>
+                    <h6 class="card-title">Airtel money</h6>
+                </div>
+                <div class="p-3 mx-5 mt-3 rounded-3 bg-success text-white">
+                    <span class="h4 mb-0 ">50 000</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-xl-4">
+        <div class="card custom-card">
+            <div class="card-body text-center">
+                <div>
+                    <h6 class="card-title">Moov Money</h6>
+                </div>
+                <div class="p-3 mx-5 mt-3 rounded-3 bg-info text-white">
+                    <span class="h4 mb-0">50 000</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-xl-4">
+        <div class="card custom-card">
+            <div class="card-body text-center">
+                <div>
+                    <h6 class="card-title">Total</h6>
+                </div>
+                <div class="p-3 mx-5 mt-3 rounded-3 bg-secondary text-white">
+                    <span class="h4 mb-0 ">100 000</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /row -->
+
+<!--
+<div class="row">
+    <div class="col-md-6 col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Détails</h3>
+            </div>
+            <div class="h-100">
+                <div class="card overflow-hidden">
+                    <div class="p-0 customers mt-1">
+                        <div class="list-group list-lg-group list-group-flush">
+                            <div class="list-group-item list-group-item-action">
+                                <div>
+                                    <div class="media-body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="mt-1">
+                                                <h5 class="mb-1 tx-13 font-weight-sembold text-dark">Nom</h5>
+                                            </div>
+                                            <span class="ms-auto wd-45p fs-16 ">
+                                                <span class="wd-100p"></span>
+                                                <span class="float-end badge">
+                                                    <span class="op-7 text-dark tx-12 font-weight-semibold">{{magasin.nom_magasin}}</span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                                <div>
+                                    <div class="media-body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="mt-1">
+                                                <h5 class="mb-1 tx-13 font-weight-sembold text-dark">Ville</h5>
+                                            </div>
+                                            <span class="ms-auto wd-45p fs-16 ">
+                                                <span class="wd-100p"></span>
+                                                <span class="float-end badge">
+                                                    <span class="op-7 text-dark tx-12 font-weight-semibold">{{magasin.ville.nom_ville}}</span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                                <div>
+                                    <div class="media-body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="mt-1">
+                                                <h5 class="mb-1 tx-13 font-weight-sembold text-dark">Quartier</h5>
+                                            </div>
+                                            <span class="ms-auto wd-45p fs-16 ">
+                                                <span class="wd-100p"></span>
+                                                <span class="float-end badge">
+                                                    <span class="op-7 text-dark tx-12 font-weight-semibold">{{magasin.commune}}</span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                                <div>
+                                    <div class="media-body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="mt-1">
+                                                <h5 class="mb-1 tx-13 font-weight-sembold text-dark">Adresse</h5>
+                                            </div>
+                                            <span class="ms-auto wd-45p fs-16 ">
+                                                <span class="wd-100p"></span>
+                                                <span class="float-end badge">
+                                                    <span class="op-7 text-dark tx-12 font-weight-semibold">{{magasin.adresse}}</span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                                <div>
+                                    <div class="media-body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="mt-1">
+                                                <h5 class="mb-1 tx-13 font-weight-sembold text-dark">Téléphone</h5>
+                                            </div>
+                                            <span class="ms-auto wd-45p fs-16 ">
+                                                <span class="wd-100p"></span>
+                                                <span class="float-end badge">
+                                                    <span class="op-7 text-dark tx-12 font-weight-semibold">{{magasin.telephone}}</span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                                <div>
+                                    <div class="media-body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="mt-1">
+                                                <h5 class="mb-1 tx-13 font-weight-sembold text-dark">Email</h5>
+                                            </div>
+                                            <span class="ms-auto wd-45p fs-16 ">
+                                                <span id="spark2" class="wd-100p"></span>
+                                                <span class="float-end badge">
+                                                    <span class="op-7 text-dark tx-12 font-weight-semibold">{{magasin.email}}</span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <a href=""><p>modifier les informations</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Comptes marchands</h3>
+            </div>
+            <div class="card-body ps-0 pe-0 bd-t-0 pt-0">
+                <div class="main-content-body-profile mb-3">
+                    <nav class="nav main-nav-line">
+                        <a class="nav-link active" data-bs-toggle="tab" href="#tab1">Airtel money</a>
+                        <a class="nav-link" data-bs-toggle="tab" href="#tab2">Moov Money</a>
+                    </nav>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                        <div class="card mg-b-20">
+                            <div class="card-body">
+                                <div class="main-profile-contact-list">
+                                    <div class="media">
+                                        <div class="media-icon bg-primary-transparent text-primary">
+                                            <i class="icon ion-md-phone-portrait"></i>
+                                        </div>
+                                        {% for c in compte_a %}
+                                            <div class="media-body">
+                                                <span class="mt-1">{{c.libelle_compte}}</span>
+                                                <div>
+                                                    {{c.numero_telephone}}
+                                                </div>
+                                            </div>
+                                        {% empty %}
+                                            <div>
+                                                Aucun compte
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab2" role="tabpanel">
+                        <div class="card mg-b-20">
+                            <div class="card-body">
+                                <div class="main-profile-contact-list">
+                                    <div class="media">
+                                        <div class="media-icon bg-primary-transparent text-primary">
+                                            <i class="icon ion-md-phone-portrait"></i>
+                                        </div>
+                                        {% for c in compte_m %}
+                                            <div class="media-body">
+                                                <span class="mt-1">{{c.libelle_compte}}</span>
+                                                <div>
+                                                    {{c.numero_telephone}}
+                                                </div>
+                                            </div>
+                                        {% empty %}
+                                            Aucun compte
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a data-bs-target="#modaldemo1" data-bs-toggle="modal"  href=""><p class="text-muted mb-0 ps-3">Ajouter un compte</p></a>
+                </div>
+                <div id="modaldemo1" class="modal">
+                        <div class="modal-dialog wd-xl-400" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body pd-20 pd-sm-40">
+                                    <button type="button" class="close pos-absolute btn btn-sm t-15 r-15 tx-26" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <form method="post">
+                                        {% csrf_token %}
+                                        <h5 class="modal-title mg-b-5">Ajouter un compte</h5>
+                                    <div class="form-group">
+                                        {{compteform.typecompte}}
+                                    </div>
+                                    <div class="form-group">
+                                        {{compteform.libelle}}
+                                    </div>
+                                    <div class="form-group">
+                                        {{compteform.numero}}
+                                    </div>
+                                    <input style="display:none;" type="text">
+                                    <button class="btn btn-primary btn-block" id="AjoutCompte">Ajouter</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+    </div>
+</div>
+-->
+
+<div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Toutes les transactions journalières</h3>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table id="file-datatable" class="border-top-0  table table-bordered text-nowrap key-buttons border-bottom">
+                        <thead>
+                            <tr>
+                                <th class="border-bottom-0">Date</th>
+                                <th class="border-bottom-0">Heure</th>
+                                <th class="border-bottom-0">Montant</th>
+                                <th class="border-bottom-0">Opérateur</th>
+                                <th class="border-bottom-0">Numéro marchand</th>
+                                <th class="border-bottom-0">Solde</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>09/03/2023</td>
+                                <td>12H 40</td>
+                                <td>8 450</td>
+                                <td>Airtel Money</td>
+                                <td>A1E360</td>
+                                <td>35 000</td>
+                            </tr>
+                            <tr>
+                                <td>09/03/2023</td>
+                                <td>12H 40</td>
+                                <td>15 000</td>
+                                <td>Airtel Money</td>
+                                <td>A1E360</td>
+                                <td>50 000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block scripts %}
+
+<!-- Eva-icons js -->
+<script src="{% static 'assets/js/eva-icons.min.js'%}"></script>
+
+<!-- Counters -->
+<script src="{% static 'assets/plugins/counters/waypoints.min.js'%}"></script>
+<script src="{% static 'assets/plugins/counters/counterup.min.js'%}"></script>
+
+<!-- Time Counter -->
+<script src="{% static 'assets/plugins/counters/jquery.missofis-countdown.js'%}"></script>
+<script src="{% static 'assets/plugins/counters/counter.js'%}"></script>
+
+<!-- DATA TABLE JS-->
+<script src="{% static 'assets/plugins/datatable/js/jquery.dataTables.min.js'%}"></script>
+<script src="{% static 'assets/plugins/datatable/js/dataTables.bootstrap5.js'%}"></script>
+<script src="{% static 'assets/plugins/datatable/js/dataTables.buttons.min.js'%}"></script>
+<script src="{% static 'assets/plugins/datatable/js/buttons.bootstrap5.min.js'%}"></script>
+<script src="{% static 'assets/plugins/datatable/js/jszip.min.js'%}"></script>
+<script src="{% static 'assets/plugins/datatable/pdfmake/pdfmake.min.js'%}"></script>
+<script src="{% static 'assets/plugins/datatable/pdfmake/vfs_fonts.js'%}"></script>
+<script src="{% static 'assets/plugins/datatable/js/buttons.html5.min.js'%}"></script>
+<script src="{% static 'assets/plugins/datatable/js/buttons.print.min.js'%}"></script>
+<script src="{% static 'assets/plugins/datatable/js/buttons.colVis.min.js'%}"></script>
+<script src="{% static 'assets/plugins/datatable/dataTables.responsive.min.js'%}"></script>
+<script src="{% static 'assets/plugins/datatable/responsive.bootstrap5.min.js'%}"></script>
+<script src="{% static 'assets/js/table-data.js'%}"></script>
+
+<script>
+    $(document).ready(function(){
+        $("#ajoutCompte").on("click",function(){alert("ok");});
+    });
+</script>
+
+{% endblock %}

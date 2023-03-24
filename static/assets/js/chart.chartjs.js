@@ -5,10 +5,10 @@ $(function() {
 	var myChart = new Chart(ctx, {
 		type: 'line',
 		data: {
-			labels: ["Sun", "Mon", "Tus", "Wed", "Thu", "Fri", "Sat"],
+			labels: ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"],
 			datasets: [{
 				label: 'Profits',
-				data: [20, 320, 110, 350, 480, 320, 480],
+				data: [20000, 320000, 110000, 350000, 480000, 320000, 480000],
 				borderWidth: 2,
 				backgroundColor: 'transparent',
 				borderColor: '#623aa2',

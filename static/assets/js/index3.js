@@ -5,11 +5,11 @@ function growthcompany(){
             series: [
                 {
                     name: 'Airtel Money',
-                    data: [40, 35, 78, 50, 75, 48, 62, 47, 80, 56, 40, 50]
+                    data: [680000, 830000, 600000, 720000, 750000, 918000, 600000, 580000, 880000, 560000, 787000, 699000]
                 },
                 {
-                    name: "Mobi Cash",
-                    data: [45, 30, 65, 35, 50, 70, 38, 60, 36, 65, 32, 45]
+                    name: "Moov Money",
+                    data: [450000, 300000, 650000, 700000, 620000, 712000, 580000, 665000, 500000, 530000, 600000, 780000]
                 },
             ],
         chart: {
@@ -67,7 +67,7 @@ function growthcompany(){
         },
         colors: [myVarVal, '#fb8d34'],
         xaxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
+            categories: ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Aout', 'Sept',
             'Oct', 'Nov', 'Dec'
             ],
             axisBorder: {

@@ -1,0 +1,156 @@
+{% extends 'utilisateurs/user_base.html' %}
+{% load static %}
+
+    {% block styles %}
+	{% block title %}SMART RECO - Les provinces{% endblock %}
+    {% endblock %}
+    
+        {% block content %}
+        
+			<!-- breadcrumb -->
+			<div class="breadcrumb-header justify-content-between">
+				<div>
+					<h4 class="content-title mb-2">Provinces</h4>
+				</div>
+				<div class="d-flex my-auto">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="javascript:void(0);">Villes et provinces</a></li>
+							<li class="breadcrumb-item active " aria-current="page">Provinces</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
+			<!-- /breadcrumb -->
+
+			<!-- row -->
+			<div class="row">
+				<div class="col-lg-12 col-md-12">
+					<div class="col-lg-12 col-md-12">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">Enregistrer province</div>
+						</div>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-lg-12">
+									{% if messages %}
+										<ul class="messages">
+											{% for message in messages %}
+												<li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+											{% endfor %}
+										</ul>
+									{% endif %}
+									{% if form.errors %}
+										<div class="alert alert-danger">
+											{{ form.errors }}
+										</div>
+									{% endif %}
+									<div class="bg-gray-100 p-4">
+										<form action="" method="post">
+											{% csrf_token %}
+											<div class="form-group">
+												{{form.code}}
+											</div>
+											<div class="form-group">
+												{{form.nom}}
+											</div>
+											<input style="display:none;" type="text" name="idprovince" id="idprovince" class="invisible hide">
+											<button id="btnEnrg" class="btn btn-primary pd-x-20">Enregistrer</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			<!-- /row -->
+
+			<!-- Row -->
+			<div class="row row-sm">
+				<div class="col-lg-12">
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">Liste des provinces</h3>
+						</div>
+						<div class="card-body">
+							<div class="table-responsive">
+								<table class="table border-top-0  table-bordered text-nowrap border-bottom" id="responsive-datatable">
+									<thead>
+										<tr>
+											<th class="wd-15p border-bottom-0">Code de la province</th>
+											<th class="wd-15p border-bottom-0">Nom de la province</th>
+											<th class="wd-5p border-bottom-0" >Actions</th>
+										</tr>
+									</thead>
+									<tbody>
+									    {% for province in provinces %}
+										<tr>
+											<td>{{province.code}}</td>
+											<td>{{province.nom}}</td>
+											<td style="width: 100px;">
+												<div class="btn-list">
+													<a href="javascript:void(0)"  class="editer btn btn-sm btn-def py-2 rounded-5 border text-muted tx-14" prov_id="{{province.id}}"><i class="fe fe-edit"></i></a>
+													<a href="javascript:void(0)" class="delete btn btn-sm btn-def py-2 rounded-5 border text-muted tx-14" prov_id="{{province.id}}"><i class="fe fe-trash"></i></a>
+													<a href="javascript:void(0)" class="delete btn btn-sm btn-def py-2 rounded-5 border text-muted tx-14" prov_id="{{province.id}}"><i class="fe fe-eye"></i></a>
+												</div>
+											</td>
+										</tr>
+									    {% endfor %}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Row -->
+
+
+
+        {% endblock %}
+
+    {% block scripts %}
+
+		<!--- Internal Modal js -->
+		<script src="{% static 'assets/js/modal.js'%}"></script>
+
+		<!--- Select2 js -->
+		<script src="{% static 'assets/plugins/select2/js/select2.min.js'%}"></script>
+
+		<script src="{% static 'assets/js/table-data.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/responsive.bootstrap5.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/dataTables.responsive.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/jquery.dataTables.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/dataTables.bootstrap5.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/dataTables.buttons.min.js'%}"></script>
+
+		<script>
+			$(document).ready(function(){
+				$("#btnEnrg").html("{{act}}");
+				$(".editer").on("click",function(){
+					id_province = $(this).attr("prov_id");
+					$.ajax({
+						url: "{% url 'reco_gest:get_province' %}",
+						type: "post",
+						"data":{
+							"id_province": id_province,
+							"csrfmiddlewaretoken": "{{ csrf_token }}"
+						},
+						success: function(province){
+							$("#id_code").val(province["code"]);
+							$("#id_nom").val(province["nom"]);
+							$("#idprovince").val(province["id"]);
+							$("#btnEnrg").html("Editer");
+							window.scrollTo(0, 0);
+
+						},
+						error: function(){alert("Erreur");}
+					});
+				});
+			});
+		</script>
+
+    {% endblock %}

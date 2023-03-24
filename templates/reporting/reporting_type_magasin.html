@@ -1,0 +1,129 @@
+{% extends 'reporting/reporting_base.html' %}
+{% load static %}
+	{% block title %}SMART RECO - Reporting - Par magasin{% endblock %}
+    {% block styles %}
+
+    {% endblock %}
+
+        {% block content %}
+
+					<!-- breadcrumb -->
+					<div class="breadcrumb-header justify-content-between">
+						<div>
+							<h4 class="content-title mb-2">Magasins</h4>
+						</div>
+						<div class="d-flex my-auto">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="javascript:void(0);">Reporting</a></li>
+									<li class="breadcrumb-item active " aria-current="page">Provinces</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+					<!-- /breadcrumb -->
+
+					<!-- main-content-body -->
+					<div class="main-content-body">
+						<div class="card">
+								<div class="card-header">
+									<h3 class="mb-0 card-title">Option de reporting</h3>
+								</div>
+								<div class="card-body">
+									<div class="row">
+										<div class="col-xl-4 mt-4 mt-xl-0">
+											<div class="form-group ">
+												<div class="form-label mb-3">Période</div>
+												<div class="custom-controls-stacked">
+													<label class="custom-control form-radio custom-control-md">
+														<input type="radio" class="custom-control-input" name="example-radios11" value="option1" checked="">
+														<span class="custom-control-label custom-control-label-md  tx-17">Reporting annuel</span>
+													</label>
+													<label class="custom-control form-radio custom-control-md">
+														<input type="radio" class="custom-control-input" name="example-radios11" value="option2">
+														<span class="custom-control-label custom-control-label-md  tx-17">Reporting mensuel</span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="col-xl-4 mt-4 mt-xl-0">
+											<div class="form-group ">
+												<div class="form-label mb-3">Opérateur</div>
+												<div class="custom-controls-stacked">
+													<label class="custom-control form-radio custom-control-md">
+														<input type="radio" class="custom-control-input" name="example-radios12" value="option1" checked="">
+														<span class="custom-control-label custom-control-label-md  tx-17">Airtel Money</span>
+													</label>
+													<label class="custom-control form-radio custom-control-md">
+														<input type="radio" class="custom-control-input" name="example-radios12" value="option2">
+														<span class="custom-control-label custom-control-label-md  tx-17">Moov Money</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						<!-- End Row -->
+					<div class="col-lg-12 col-md-12">
+							<div class="card mg-b-20" id="list6">
+								<div class="card-header">
+									<h3 class="card-title">Choisir le magasin</h3>
+								</div>
+								<div class="card-body">
+									<div class="text-wrap">
+										<div class="example">
+											<ul class="list-group">
+												{% for t_mag in t_magasins %}
+												<a
+														{% if t_mag.libelle == "CKDO" %}
+															href="{% url 'reco_gest:reporting' %}"
+												{% else %} href="#" {% endif %}>
+
+
+													<li class="list-group-item">{{t_mag.libelle}}</li>
+												</a>
+												{% endfor %}
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /row -->
+
+        {% endblock %}
+
+    {% block scripts %}
+
+		<!--- DATEPICKER JS -->
+		<script src="{% static 'assets/plugins/jquery-ui/ui/widgets/datepicker.js'%}"></script>
+
+		<!--- INTERNAL SAMPLEDATA JS -->
+		<script src="{% static 'assets/js/chart.flot.sampledata.js'%}"></script>
+
+		<!-- APEXCHART JS -->
+		<script src="{% static 'assets/js/apexcharts.min.js'%}"></script>
+
+		<!-- CIRCLE PROGRESS -->
+		<script src="{% static 'assets/js/vendors/circle-progress.min.js'%}"></script>
+
+		<!--- INDEX3 js -->
+		<script src="{% static 'assets/js/index3.js'%}"></script>
+
+		<script src="{% static 'assets/plugins/datatable/js/jquery.dataTables.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/dataTables.bootstrap5.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/dataTables.buttons.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/buttons.bootstrap5.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/jszip.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/pdfmake/pdfmake.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/pdfmake/vfs_fonts.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/buttons.html5.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/buttons.print.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/buttons.colVis.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/dataTables.responsive.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/responsive.bootstrap5.min.js'%}"></script>
+		<script src="{% static 'assets/js/table-data.js'%}"></script>
+
+    {% endblock %}

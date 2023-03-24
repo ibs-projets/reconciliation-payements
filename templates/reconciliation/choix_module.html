@@ -1,0 +1,82 @@
+{% extends 'reconciliation/components/custom-base.html' %}
+{% load static %}
+
+    {% block styles %}
+
+    {% endblock %}
+
+    {% block body %}
+
+    <body class="main-body login-img">
+
+    {% endblock %}
+
+        {% block content %}
+
+			<!-- main-signin-wrapper -->
+			<div class="my-auto h-100 page">
+				<div class="main-signin-wrapper p-0">
+					<div class="main-card-signin construction text-center">
+						<div class="p-5  wd-800">
+							<div>
+								<h2 class="tx-30">Choisissez un module</h2>
+								<p class="tx-14 text-muted">Veuillez choisir un des trois module pour continuer</p>
+								<div class="row row-sm">
+						<div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
+							<a class="mod" module="recette" href="{% url 'reco_gest:dashboard_recette' %}">
+								<div class="card text-center">
+								<div class="card-body ">
+									<div class="feature widget-2 text-center mt-0 mb-3">
+										<i class="ti-shopping-cart project bg-primary-transparent mx-auto text-primary "></i>
+									</div>
+									<h6 class="mb-1 text-muted">Module</h6>
+									<h3 class="font-weight-semibold">Recettes</h3>
+								</div>
+							</div>
+							</a>
+						</div>
+						<div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
+							<a class="mod" module="reporting" href="{% url 'reco_gest:dashboard_reporting' %}">
+								<div class="card text-center">
+								<div class="card-body">
+									<div class="feature widget-2 text-center mt-0 mb-3">
+										<i class="ti-bar-chart project bg-teal-transparent mx-auto text-teal "></i>
+									</div>
+									<h6 class="mb-1 text-muted">Module</h6>
+									<h3 class="font-weight-semibold">Reporting</h3>
+								</div>
+							</div>
+							</a>
+						</div>
+						<div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
+							<a class="mod" module="users" href="{% url 'reco_gest:dashboard_user' %}">
+								<div class="card text-center">
+								<div class="card-body ">
+									<div class="feature widget-2 text-center mt-0 mb-3">
+										<i class="ti-user project bg-pink-transparent mx-auto text-pink "></i>
+									</div>
+									<h6 class="mb-1 text-muted">Module</h6>
+									<h3 class="font-weight-semibold">Utilisateurs</h3>
+								</div>
+							</div>
+							</a>
+						</div>
+					</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+        {% endblock %}
+
+    {% block scripts %}
+
+		<!--- Jquery.Coutdown js -->
+		<script src="{% static 'assets/plugins/jquery-countdown/jquery.lwtCountdown-1.0.js'%}"></script>
+		<script src="{% static 'assets/plugins/jquery-countdown/count-down.js'%}"></script>
+
+		<!-- JQuery sparkline js -->
+		<script src="{% static 'assets/plugins/jquery-sparkline/jquery.sparkline.min.js'%}"></script>
+
+    {% endblock %}

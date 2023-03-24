@@ -1,0 +1,120 @@
+{% extends 'utilisateurs/user_base.html' %}
+{% load static %}
+{% block title %}SMART RECO - Tableau de bord{% endblock %}
+
+    {% block styles %}
+
+    {% endblock %}
+    
+        {% block content %}
+        
+					<!-- breadcrumb -->
+					<div class="breadcrumb-header justify-content-between">
+						<div>
+							<h4 class="content-title mb-2">Tableau de bord</h4>
+						</div>
+						<div class="d-flex my-auto">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="javascript:void(0);">Utilisateurs</a></li>
+									<li class="breadcrumb-item active " aria-current="page">Tableau de bord</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+					<!-- /breadcrumb -->
+
+					<!-- main-content-body -->
+					<div class="main-content-body">
+						<div class="row row-sm">
+							<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+										<div class="card">
+											<div class="card-body">
+												<div class="float-end bg-primary shadow-primary stamp stamp-lg"><i class="bx bx-user tx-24"></i></div>
+												<div class="text-muted"><h5>Total des utilisateurs</h5></div>
+													<span class="mb-1 tx-26 font-weight-semibold">1</span>
+											</div>
+										</div>
+									</div>
+							<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+										<div class="card">
+											<div class="card-body">
+												<div class="float-end bg-primary shadow-primary stamp stamp-lg"><i class="bx bx-user tx-24"></i></div>
+												<div class="text-muted"><h5>Utilisateurs connectés</h5></div>
+													<span class="mb-1 tx-26 font-weight-semibold">1</span>
+											</div>
+										</div>
+									</div>
+						</div>
+				   </div>
+					<!-- /container -->
+					<!--div-->
+						<div class="col-xl-12">
+							<div class="card mg-b-20">
+								<div class="card-header pb-0">
+									<div class="d-flex justify-content-between">
+										<h4 class="card-title mg-b-2 mt-2">Utilisateurs connectés</h4>
+										<i class="mdi mdi-dots-horizontal text-gray"></i>
+									</div>
+								</div>
+								<div class="card-body">
+									<div class="table-responsive">
+										<table class="table table-bordered mg-b-1 text-md-nowrap">
+											<thead>
+												<tr>
+													<th>Nom</th>
+													<th>Prénom</th>
+													<th>Email</th>
+													<th>Profil</th>
+												</tr>
+											</thead>
+											<tbody>
+												{% for u in users_connects %}
+													<tr>
+														<td>{{u.user.last_name}}</td>
+														<td>{{u.user.first_name}}</td>
+														<td>{{u.user.email}}</td>
+														{% if u.roles.admin == True %}
+															<td>Administrateur</td>
+														{% else %}
+															<td>Consultant</td>
+														{% endif %}
+													</tr>
+												{% endfor %}
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/div-->
+
+        {% endblock %}
+
+    {% block scripts %}
+
+		<!--- Chart bundle min js -->
+		<script src="{% static 'assets/plugins/chart.js/Chart.bundle.min.js'%}"></script>
+
+		<!-- JQuery sparkline js -->
+		<script src="{% static 'assets/plugins/jquery-sparkline/jquery.sparkline.min.js'%}"></script>
+
+		<!--- Internal Sampledata js -->
+		<script src="{% static 'assets/js/chart.flot.sampledata.js'%}"></script>
+
+		<!-- Moment js -->
+		<script src="{% static 'assets/plugins/moment/moment.js'%}"></script>
+
+		<!-- ApexChart -->
+		<script src="{% static 'assets/js/apexcharts.min.js'%}"></script>
+
+		<!--- Internal Vector-maps js -->
+		<script src="{% static 'assets/plugins/jqvmap/jquery.vmap.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/jqvmap/maps/jquery.vmap.world.js'%}"></script>
+
+		<!--- Index js -->
+		<script src="{% static 'assets/js/index5.js'%}"></script>
+
+
+
+    {% endblock %}

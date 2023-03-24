@@ -1,0 +1,71 @@
+{% extends 'reporting/reporting_base.html' %}
+{% load static %}
+
+    {% block styles %}
+
+    {% endblock %}
+
+        {% block content %}
+
+					<!-- breadcrumb -->
+					<div class="breadcrumb-header justify-content-between">
+						<div>
+							<h4 class="content-title mb-2">Reporting</h4>
+						</div>
+						<div class="d-flex my-auto">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="javascript:void(0);">Reporting</a></li>
+									<li class="breadcrumb-item active " aria-current="page">Evoltion des recettes CKDO</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+					<!-- /breadcrumb -->
+
+					<!-- Row -->
+					<div class="row">
+						<div class="col-xl-12 col-lg-12 col-md-12 ">
+								<div class="card overflow-hidden">
+									<div class="card-header bg-transparent pd-b-0 pd-t-20 bd-b-0">
+										<h5 class="card-title">Evolution des recettes des magasins CKDO de l'Estuaire en 2022</h5>
+									</div>
+									<div class="card-body pd-y-7">
+										<div id="growthcompany"></div>
+									</div>
+								</div>
+							</div>
+					</div>
+					<!-- End Row -->
+
+        {% endblock %}
+
+    {% block scripts %}
+
+		<!--- Datepicker js -->
+		<script src="{% static 'assets/plugins/jquery-ui/ui/widgets/datepicker.js'%}"></script>
+
+		<!--- Internal Chart.bundle js -->
+		<script src="{% static 'assets/plugins/chart.js/Chart.bundle.min.js'%}"></script>
+
+		<!-- JQuery sparkline js -->
+		<script src="{% static 'assets/plugins/jquery-sparkline/jquery.sparkline.min.js'%}"></script>
+
+		<!--- Internal Chartjs js -->
+		<script src="{% static 'assets/js/chart.chartjs.js'%}"></script>
+
+		<!--- Index js -->
+		<script src="{% static 'assets/js/index.js'%}"></script>
+		<script src="{% static 'assets/js/script.js'%}"></script>
+
+
+		<!-- APEXCHART JS -->
+		<script src="{% static 'assets/js/apexcharts.min.js'%}"></script>
+
+		<!-- CIRCLE PROGRESS -->
+		<script src="{% static 'assets/js/vendors/circle-progress.min.js'%}"></script>
+
+		<!--- INDEX3 js -->
+		<script src="{% static 'assets/js/index3.js'%}"></script>
+
+    {% endblock %}

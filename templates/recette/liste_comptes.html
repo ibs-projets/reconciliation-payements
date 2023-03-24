@@ -1,0 +1,220 @@
+{% extends 'recette/recette_base.html' %}
+{% load static %}
+	{% block title %}SMART RECO - Type de magasin {{nomtypemag}} par ville{% endblock %}
+    {% block styles %}
+
+    {% endblock %}
+
+        {% block content %}
+
+					<div id="modaldemo1" class="modal">
+                        <div class="modal-dialog wd-xl-400" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body pd-20 pd-sm-40">
+                                    <button type="button" class="close pos-absolute btn btn-sm t-15 r-15 tx-26" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h5 class="modal-title mg-b-5">Modifier le compte</h5>
+                                    <div class="form-group">
+                                        <input type="text" id="codeClient" class="form-control" placeholder="Code client">
+                                    </div><!-- form-group -->
+                                    <div class="form-group">
+                                        <input type="text" id="numTel" class="form-control" placeholder="Numéro de téléphone">
+                                    </div><!-- form-group -->
+                                    <div class="form-group">
+										<select class="form-control" name="mag" id="idMag">
+											{% for mag in magasins %}
+												<option value="{{mag.id}}">{{mag.nom_magasin}}</option>
+											{% endfor %}
+										</select>
+                                    </div>
+                                    <div class="form-group">
+										<select class="form-control" name="mtypemag" id="idType">
+											{% for t in t_mags %}
+												<option value="{{t.id}}">{{t.libelle}}</option>
+											{% endfor %}
+										</select>
+                                    </div>
+									<input type="text" id="idCompte" style="display:none">
+                                    <button id="btnModifierCompte" class="btn btn-primary btn-block">Modifier</button>
+                                </div><!-- modal-body -->
+                            </div><!-- modal-content -->
+                        </div><!-- modal-dialog -->
+                    </div>
+
+					<!-- breadcrumb -->
+					<div class="breadcrumb-header justify-content-between">
+						<div>
+							<h4 class="content-title mb-2">Comptes marchands</h4>
+						</div>
+						<div class="d-flex my-auto">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="javascript:void(0);">Comptes marchands</a></li>
+									<li class="breadcrumb-item active " aria-current="page">Liste des comptes</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+					<!-- /breadcrumb -->
+
+					<!-- main-content-body -->
+					<div class="main-content-body">
+						<div class="row row-sm">
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+								<div class="card ">
+									<div class="card-body">
+										<div class="card-widget">
+											<h6 class="mb-2">Nombre de comptes</h6>
+											<h2 class="text-end"><i class="mdi mdi-account icon-size float-start text-danger text-danger-shadow"></i><span>{{nb_compte}}</span></h2>
+											<p class="mb-0">Airtel Money<span class="float-end">{{nb_compte_airtel}}</span></p>
+											<p class="mb-0">Moov Money<span class="float-end">{{nb_compte_moov}}</span></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Row -->
+			<div class="row row-sm">
+				<div class="col-lg-12">
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">Liste des magasins</h3>
+						</div>
+						<div class="card-body">
+							<div class="table-responsive">
+								<table class="table border-top-0  table-bordered text-nowrap border-bottom" id="responsive-datatable">
+									<thead>
+										<tr>
+											<th class="wd-15p border-bottom-0">Type de compte</th>
+											<th class="wd-15p border-bottom-0">Magasin</th>
+											<th class="wd-15p border-bottom-0">Numéro marchand</th>
+											<th class="wd-15p border-bottom-0">Numéro de téléphone</th>
+											<th class="wd-10p border-bottom-0">Actions</th>
+										</tr>
+									</thead>
+									<tbody>
+									    {% for compte in comptes %}
+										<tr>
+											<td>{{compte.type_compte.libelle}}</td>
+											<td>{{compte.magasin.nom_magasin}}</td>
+											<td>{{compte.libelle_compte}}</td>
+											<td>{{compte.numero_telephone}}</td>
+											<td style="width: 100px;">
+												<div class="btn-list">
+													<a href="#" class="btn btn-sm btn-def py-2 rounded-5 border text-muted tx-14 editCompte" id_compte="{{compte.id}}"><i class="fe fe-edit" data-bs-target="#modaldemo1" data-bs-toggle="modal"></i></a>
+													<a href="{% url 'reco_gest:voir_details_compte' compte.id %}" class="btn btn-sm btn-def py-2 rounded-5 border text-muted tx-14"><i class="fe fe-eye"></i></a>
+													<!--<a href="javascript:void(0)" class="btn btn-sm btn-def py-2 rounded-5 border text-muted tx-14"><i class="fe fe-trash"></i></a> -->
+												</div>
+											</td>
+										</tr>
+									    {% endfor %}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Row -->
+					</div>
+					<!-- /row -->
+
+        {% endblock %}
+
+    {% block scripts %}
+
+		<!--- DATEPICKER JS -->
+		<script src="{% static 'assets/plugins/jquery-ui/ui/widgets/datepicker.js'%}"></script>
+
+		<!--- INTERNAL SAMPLEDATA JS -->
+		<script src="{% static 'assets/js/chart.flot.sampledata.js'%}"></script>
+
+		<!-- APEXCHART JS -->
+		<script src="{% static 'assets/js/apexcharts.min.js'%}"></script>
+
+		<!-- CIRCLE PROGRESS -->
+		<script src="{% static 'assets/js/vendors/circle-progress.min.js'%}"></script>
+
+		<!--- INDEX3 js -->
+		<script src="{% static 'assets/js/index3.js'%}"></script>
+
+		<script>
+			$(document).ready(function(){
+				$(".editCompte").on("click",function(){
+					var id_compte = $(this).attr("id_compte");
+					$.ajax({
+						type: "post",
+						url: "{% url 'reco_gest:recuperer_infos_compte' %}",
+						data: {
+							"id_compte": id_compte,
+							"csrfmiddlewaretoken": "{{ csrf_token }}"
+						},
+						success: function(compte){
+							id_mag = compte.magasin
+							id_type_mag = compte.type_compte
+							$("#numTel").val(compte.numero_telephone);
+							$("#codeClient").val(compte.libelle_compte);
+							$("#idMag option[value=id_mag]").attr("selected",true);
+							$("#idType option[value=id_type_mag]").attr("selected",true);
+							$("#idCompte").val(compte.id);
+						}
+					});
+				});
+			});
+		</script>
+
+		<script>
+			$(document).ready(function(){
+				$("#btnModifierCompte").on("click",function(){
+					var codeClient = $("#codeClient").val();
+					var num_tel = $("#numTel").val();
+					if($("#idType option:selected").text()=="Airtel Money" && num_tel.slice(0,2) != "07"){
+						alert("Ce numéro de téléphone ne correspond pas au type d'opérateur choisi");
+						num_tel = "";
+					}else{
+						if($("#id_typecompte option:selected").text()=="Moov Money" && num_tel.slice(0,2) != "06"){
+							alert("Ce numéro de téléphone ne correspond pas au type d'opérateur choisi");
+							num_tel = "";
+						}else{
+							$.ajax({
+								type: "post",
+								url: "{% url 'reco_gest:editer_compte' %}",
+								data: {
+									"num_tel": num_tel,
+									"code_client": $("#codeClient").val(),
+									"id_mag": $("#idMag").val(),
+									"id_type":$("#idType").val(),
+									"id_compte": $("#idCompte").val(),
+									"csrfmiddlewaretoken": "{{csrf_token}}"
+								},
+								success: function(reponse){
+									if(reponse["statut"]=="succes"){
+										alert(reponse["message"]);
+										window.location();
+									}else{
+										alert(reponse["message"]);
+									}
+								}
+							});
+						}
+					}
+				});
+			});
+		</script>
+
+		<script src="{% static 'assets/plugins/datatable/js/jquery.dataTables.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/dataTables.bootstrap5.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/dataTables.buttons.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/buttons.bootstrap5.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/jszip.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/pdfmake/pdfmake.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/pdfmake/vfs_fonts.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/buttons.html5.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/buttons.print.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/buttons.colVis.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/dataTables.responsive.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/responsive.bootstrap5.min.js'%}"></script>
+		<script src="{% static 'assets/js/table-data.js'%}"></script>
+
+    {% endblock %}

@@ -70,6 +70,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'gestion_reconciliations.context_processor.compteform'
             ],
         },
     },
@@ -77,6 +78,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'reconciliations.wsgi.application'
 
+LOGIN_REDIRECT_URL = 'home/'
+LOGIN_URL = '/connexion'
+
+# configuration SMTP
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "leauramejill@gmail.com"
+EMAIL_HOST_PASSWORD = "mbgbdanabjktpbto"
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases

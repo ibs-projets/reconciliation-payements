@@ -1,0 +1,146 @@
+{% extends 'recette/recette_base.html' %}
+{% load static %}
+	{% block title %}SMART RECO - Type de magasin {{nomtypemag}} par province {% endblock %}
+    {% block styles %}
+
+    {% endblock %}
+
+        {% block content %}
+
+					<!-- breadcrumb -->
+					<div class="breadcrumb-header justify-content-between">
+						<div>
+							<h4 class="content-title mb-2">Magasins</h4>
+						</div>
+						<div class="d-flex my-auto">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="javascript:void(0);">Magasins</a></li>
+									<li class="breadcrumb-item active " aria-current="page">{{nomtypemag}}</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+					<!-- /breadcrumb -->
+
+					<!-- main-content-body -->
+					<div class="main-content-body">
+						<div class="row row-sm">
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+								<div class="card ">
+									<div class="card-body">
+										<div class="card-widget">
+											<h6 class="mb-2">Total {{nomtypemag}} 44444</h6>
+											<h2 class="text-end"><i class="mdi mdi-store icon-size float-start text-danger text-danger-shadow"></i><span>{{nb_total}}</span></h2>
+											{% if nomtypemag=="CKDO" %}
+												<p class="mb-0">Airtel Money<span class="float-end">850 000</span></p>
+												<p class="mb-0">Mobi Cash<span class="float-end">620 000</span></p>
+											{% elif nomtypemag == "CK2" %}
+												<p class="mb-0">Airtel Money<span class="float-end">1 000 000</span></p>
+												<p class="mb-0">Mobi Cash<span class="float-end">1 100 000</span></p>
+											{% elif nomtypemag == "GABOPRIX" %}
+												<p class="mb-0">Airtel Money<span class="float-end">600 000</span></p>
+												<p class="mb-0">Mobi Cash<span class="float-end">750 000</span></p>
+											{% elif nomtypemag == "INTERGROS" %}
+												<p class="mb-0">Airtel Money<span class="float-end">920 000</span></p>
+												<p class="mb-0">Mobi Cash<span class="float-end">750 000</span></p>
+											{% elif nomtypemag == "SUPERGROS" %}
+												<p class="mb-0">Airtel Money<span class="float-end">1 800 000</span></p>
+												<p class="mb-0">Mobi Cash<span class="float-end">1 000 000</span></p>
+											{% elif nomtypemag == "GEANT CKDO" %}
+												<p class="mb-0">Airtel Money<span class="float-end">2 200 000</span></p>
+												<p class="mb-0">Mobi Cash<span class="float-end">1 300 000</span></p>
+											{% elif nomtypemag == "SUPERCKDO" %}
+												<p class="mb-0">Airtel Money<span class="float-end">950 000</span></p>
+												<p class="mb-0">Mobi Cash<span class="float-end">850 000</span></p>
+											{% elif nomtypemag == "MAXICKDO" %}
+												<p class="mb-0">Airtel Money<span class="float-end">600 000</span></p>
+												<p class="mb-0">Mobi Cash<span class="float-end">750 000</span></p>
+											{% elif nomtypemag == "SOGAM EQUIp" %}
+												<p class="mb-0">Airtel Money<span class="float-end">3 000 000</span></p>
+												<p class="mb-0">Mobi Cash<span class="float-end">2 000 000</span></p>
+											{% elif nomtypemag == "MATELEC" %}
+												<p class="mb-0">Airtel Money<span class="float-end">2 500 000</span></p>
+												<p class="mb-0">Mobi Cash<span class="float-end">2 500 000</span></p>
+											{%else %}
+												<p class="mb-0">Airtel Money<span class="float-end">1 000 000</span></p>
+												<p class="mb-0">Mobi Cash<span class="float-end">980 000</span></p>
+											{% endif %}
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xxl-3 col-xl-12 col-lg-12 col-md-12">
+								<div class="card">
+									<div class="card-header border-bottom-0">
+										<h3 class="card-title">{{nomtypemag}} par province</h3>
+									</div>
+									<div class="border-0">
+										<table class="table mb-0 card-table table-vcenter text-nowrap">
+											<tbody>
+												{% for p in nb_t_mag %}
+													<tr>
+														<td class="no-border">
+															{% if p.magasins__ville__province__nom == None %}
+																Aucune province
+															{% else %}
+																{{p.magasins__ville__province__nom}}
+															{% endif %}
+														</td>
+
+															<td class="no-border text-end">
+																<span class="btn btn-primary btn-sm">
+																	<a href="{% url 'reco_gest:magasin_par_ville' nomtypemag p.magasins__ville__nom_ville %}">
+																	{{p.nb_prov}}
+																	</a>
+																</span>
+															</td>
+
+													</tr>
+												{% endfor %}
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /row -->
+
+        {% endblock %}
+
+    {% block scripts %}
+
+		<!--- DATEPICKER JS -->
+		<script src="{% static 'assets/plugins/jquery-ui/ui/widgets/datepicker.js'%}"></script>
+
+		<!--- INTERNAL SAMPLEDATA JS -->
+		<script src="{% static 'assets/js/chart.flot.sampledata.js'%}"></script>
+
+		<!-- APEXCHART JS -->
+		<script src="{% static 'assets/js/apexcharts.min.js'%}"></script>
+
+		<!-- CIRCLE PROGRESS -->
+		<script src="{% static 'assets/js/vendors/circle-progress.min.js'%}"></script>
+
+		<!--- INDEX3 js -->
+		<script src="{% static 'assets/js/index3.js'%}"></script>
+
+		<script src="{% static 'assets/plugins/datatable/js/jquery.dataTables.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/dataTables.bootstrap5.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/dataTables.buttons.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/buttons.bootstrap5.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/jszip.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/pdfmake/pdfmake.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/pdfmake/vfs_fonts.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/buttons.html5.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/buttons.print.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/js/buttons.colVis.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/dataTables.responsive.min.js'%}"></script>
+		<script src="{% static 'assets/plugins/datatable/responsive.bootstrap5.min.js'%}"></script>
+		<script src="{% static 'assets/js/table-data.js'%}"></script>
+
+    {% endblock %}

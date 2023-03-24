@@ -1,0 +1,232 @@
+{% extends 'reconciliation/components/base.html' %}
+{% load static %}
+
+    {% block styles %}
+	{% block title %}SMART RECO - votre profile{% endblock %}
+
+    {% endblock %}
+    
+        {% block content %}
+        
+					<!-- breadcrumb -->
+					<div class="breadcrumb-header justify-content-between">
+						<div>
+							<h4 class="content-title mb-2">Utilisateurs</h4>
+						</div>
+						<div class="d-flex my-auto">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="javascript:void(0);">Utililisateur</a></li>
+									<li class="breadcrumb-item active " aria-current="page">Profile</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+					<!-- /breadcrumb -->
+
+					<!-- row -->
+					<div class="row row-sm">
+						<div class="col-sm-12 col-lg-12 col-xl-12">
+							<div class="">
+								<a class="main-header-arrow" href="" id="ChatBodyHide"><i class="icon ion-md-arrow-back"></i></a>
+								<div class="main-content-body main-content-body-contacts card custom-card">
+									<div class="main-contact-info-header pt-3">
+										<div class="media">
+											<div class="main-img-user">
+												<img alt="avatar" src="{% static 'assets/img/users/6.jpg'%}"> <a href=""><i class="fe fe-camera"></i></a>
+											</div>
+											<div class="media-body">
+												<h5>{{request.session.username}}</h5>
+												<p class="text-muted tx-12">Web Designer</p>
+											</div>
+										</div>
+										<div class="main-contact-action btn-list pt-3 pe-3">
+											<a   href="javascript:void(0);" class="btn ripple btn-primary text-white btn-icon rounded-5" data-bs-placement="top" data-bs-toggle="tooltip" title="Edit Profile"><i class="fe fe-edit"></i></a>
+											<a   href="javascript:void(0);" class="btn ripple btn-secondary text-white btn-icon ms-1  rounded-5" data-bs-placement="top" data-bs-toggle="tooltip" title="Delete Profile"><i class="fe fe-trash-2"></i></a>
+											<a   href="javascript:void(0);" class="btn ripple btn-info text-white btn-icon ms-1  rounded-5" data-bs-placement="top" data-bs-toggle="tooltip" title="Favorite"><i class="fe fe-star"></i></a>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-6">
+											<div class="main-contact-info-body p-4">
+										<!--<div>
+											<h6>Profile</h6>
+										</div> -->
+										<div class="row mb-4">
+											<div class="col-xl-2">
+												<label class="text-muted tx-14">Nom </label>
+											</div>
+											<div class="col-xl-10">
+												<p class="mb-0 tx-14">{{agent.user.last_name}}</p>
+											</div>
+										</div>
+										<div class="row mb-4">
+											<div class="col-xl-2">
+												<label class="text-muted tx-14">Prénom</label>
+											</div>
+											<div class="col-xl-10">
+												<p class="mb-0 tx-14">{{agent.user.first_name}}</p>
+											</div>
+										</div>
+										<div class="row mb-4">
+											<div class="col-xl-2">
+												<label class="text-muted tx-14">Ville </label>
+											</div>
+											<div class="col-xl-10">
+												<p class="mb-0 tx-14">{{agent.ville.nom_ville}}</p>
+											</div>
+										</div>
+										<div class="row mb-4">
+											<div class="col-xl-2">
+												<label class="text-muted tx-14">Adresse</label>
+											</div>
+											<div class="col-xl-10">
+												<p class="mb-0 tx-14">{{agent.user.adresse}}</p>
+											</div>
+										</div>
+										<div class="row mb-4">
+											<div class="col-xl-2">
+												<label class="text-muted tx-14">Email</label>
+											</div>
+											<div class="col-xl-10">
+												<p class="mb-0 tx-14">{{agent.telephone}}</p>
+											</div>
+										</div>
+									</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header">
+									<div class="card-title">Recent Contacts</div>
+								</div>
+								<div class="card-body">
+									<div class="row">
+										<div class="col-md-12 col-lg-12 col-xl-6 col-xxl-4">
+											<div class="border d-flex p-2 br-5 mb-2">
+												<div class="recent-contacts me-3">
+													<div class="main-img-user avatar-md">
+														<img alt="avatar" class="rounded-circle" src="{% static 'assets/img/users/5.jpg'%}">
+													</div>
+												</div>
+												<div>
+													<h6 class="mt-1 mb-1">Abigali kelly</h6>
+													<p class="mb-0 text-muted">Front end</p>
+												</div>
+												<div class="my-auto ms-auto">
+													<nav class="contact-info d-flex">
+														<a href="javascript:void(0);" class="contact-icon border tx-inverse rounded-pill me-2" data-bs-toggle="tooltip" title="" data-bs-original-title="Call" aria-label="Call"><i class="fe fe-phone tx-12"></i></a>
+														<a href="javascript:void(0);" class="contact-icon border tx-inverse rounded-pill" data-bs-toggle="tooltip" title="" data-bs-original-title="Video" aria-label="Video"><i class="fe fe-video tx-12"></i></a>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 col-lg-12 col-xl-6 col-xxl-4">
+											<div class="border d-flex p-2 br-5 mb-2">
+												<div class="recent-contacts me-3">
+													<div class="main-img-user avatar-md">
+														<img alt="avatar" class="rounded-circle" src="{% static 'assets/img/users/2.jpg'%}">
+													</div>
+												</div>
+												<div>
+													<h6 class="mt-1 mb-1">Brenda Crux</h6>
+													<p class="mb-0 text-muted">Angular</p>
+												</div>
+												<div class="my-auto ms-auto">
+													<nav class="contact-info d-flex">
+														<a href="javascript:void(0);" class="contact-icon border tx-inverse rounded-pill me-2" data-bs-toggle="tooltip" title="" data-bs-original-title="Call" aria-label="Call"><i class="fe fe-phone tx-12"></i></a>
+														<a href="javascript:void(0);" class="contact-icon border tx-inverse rounded-pill" data-bs-toggle="tooltip" title="" data-bs-original-title="Video" aria-label="Video"><i class="fe fe-video tx-12"></i></a>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 col-lg-12 col-xl-6 col-xxl-4">
+											<div class="border d-flex p-2 br-5 mb-2">
+												<div class="recent-contacts me-3">
+													<div class="main-img-user avatar-md">
+														<img alt="avatar" class="rounded-circle" src="{% static 'assets/img/users/8.jpg'%}">
+													</div>
+												</div>
+												<div>
+													<h6 class="mt-1 mb-1">Rach Michelle</h6>
+													<p class="mb-0 text-muted">Php</p>
+												</div>
+												<div class="my-auto ms-auto">
+													<nav class="contact-info d-flex">
+														<a href="javascript:void(0);" class="contact-icon border tx-inverse rounded-pill me-2" data-bs-toggle="tooltip" title="" data-bs-original-title="Call" aria-label="Call"><i class="fe fe-phone tx-12"></i></a>
+														<a href="javascript:void(0);" class="contact-icon border tx-inverse rounded-pill" data-bs-toggle="tooltip" title="" data-bs-original-title="Video" aria-label="Video"><i class="fe fe-video tx-12"></i></a>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 col-lg-12 col-xl-6 col-xxl-4">
+											<div class="border d-flex p-2 br-5 mb-2">
+												<div class="recent-contacts me-3">
+													<div class="main-img-user avatar-md">
+														<img alt="avatar" class="rounded-circle" src="{% static 'assets/img/users/9.jpg'%}">
+													</div>
+												</div>
+												<div>
+													<h6 class="mt-1 mb-1">Matt Harder</h6>
+													<p class="mb-0 text-muted">Codeignitor</p>
+												</div>
+												<div class="my-auto ms-auto">
+													<nav class="contact-info d-flex">
+														<a href="javascript:void(0);" class="contact-icon border tx-inverse rounded-pill me-2" data-bs-toggle="tooltip" title="" data-bs-original-title="Call" aria-label="Call"><i class="fe fe-phone tx-12"></i></a>
+														<a href="javascript:void(0);" class="contact-icon border tx-inverse rounded-pill" data-bs-toggle="tooltip" title="" data-bs-original-title="Video" aria-label="Video"><i class="fe fe-video tx-12"></i></a>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 col-lg-12 col-xl-6 col-xxl-4">
+											<div class="border d-flex p-2 br-5 mb-2">
+												<div class="recent-contacts me-3">
+													<div class="main-img-user avatar-md">
+														<img alt="avatar" class="rounded-circle" src="{% static 'assets/img/users/1.jpg'%}">
+													</div>
+												</div>
+												<div>
+													<h6 class="mt-1 mb-1">Micheal Phelps</h6>
+													<p class="mb-0 text-muted">Web Testing</p>
+												</div>
+												<div class="my-auto ms-auto">
+													<nav class="contact-info d-flex">
+														<a href="javascript:void(0);" class="contact-icon border tx-inverse rounded-pill me-2" data-bs-toggle="tooltip" title="" data-bs-original-title="Call" aria-label="Call"><i class="fe fe-phone tx-12"></i></a>
+														<a href="javascript:void(0);" class="contact-icon border tx-inverse rounded-pill" data-bs-toggle="tooltip" title="" data-bs-original-title="Video" aria-label="Video"><i class="fe fe-video tx-12"></i></a>
+													</nav>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 col-lg-12 col-xl-6 col-xxl-4">
+											<div class="border d-flex p-2 br-5 mb-2">
+												<div class="recent-contacts me-3">
+													<div class="main-img-user avatar-md">
+														<img alt="avatar" class="rounded-circle" src="{% static 'assets/img/users/7.jpg'%}">
+													</div>
+												</div>
+												<div>
+													<h6 class="mt-1 mb-1">Azenda Hills</h6>
+													<p class="mb-0 text-muted">Django</p>
+												</div>
+												<div class="my-auto ms-auto d-md-flex">
+													<nav class="contact-info d-flex">
+														<a href="javascript:void(0);" class="contact-icon border tx-inverse rounded-pill me-2" data-bs-toggle="tooltip" title="" data-bs-original-title="Call" aria-label="Call"><i class="fe fe-phone tx-12"></i></a>
+														<a href="javascript:void(0);" class="contact-icon border tx-inverse rounded-pill" data-bs-toggle="tooltip" title="" data-bs-original-title="Video" aria-label="Video"><i class="fe fe-video tx-12"></i></a>
+													</nav>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+					</div>
+					<!-- row closed -->
+
+        {% endblock %}
+
+    {% block scripts %}
+
+
+    {% endblock %}

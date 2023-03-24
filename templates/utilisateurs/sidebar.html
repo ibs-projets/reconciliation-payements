@@ -1,0 +1,260 @@
+{% load static %}
+{% load filtres %}
+
+<div class="app-sidebar__overlay" data-bs-toggle="sidebar"></div>
+<div class="sticky">
+    <aside class="app-sidebar sidebar-scroll">
+        <div class="main-sidebar-header active">
+            <a class="desktop-logo logo-light active" href="{% url 'reco_gest:dashboard_user' %}"><img src="{% static 'assets/img/brand/logo_ceca.png'%}"
+                                                                        class="main-logo" alt="logo"></a>
+            <a class="desktop-logo logo-dark active" href="index"><img
+                    src="{% static 'assets/img/brand/logo-white.png'%}" class="main-logo" alt="logo"></a>
+            <a class="logo-icon mobile-logo icon-light active" href="index"><img
+                    src="{% static 'assets/img/brand/favicon.png'%}" alt="logo"></a>
+            <a class="logo-icon mobile-logo icon-dark active" href="index"><img
+                    src="{% static 'assets/img/brand/favicon-white.png'%}" alt="logo"></a>
+        </div>
+        <div class="main-sidemenu">
+            <div class="main-sidebar-loggedin">
+                <div class="app-sidebar__user">
+                    <div class="dropdown user-pro-body text-center">
+                        <div class="user-pic">
+                            <img src="{% static 'assets/img/users/5.jpg'%}" alt="user-img"
+                                 class="rounded-circle mCS_img_loaded">
+                        </div>
+                        <div class="user-info mb-4">
+                            <h6 class=" mb-0 text-dark">{{request.session.username}}</h6>
+                            <span class="text-muted app-sidebar__user-name text-sm">Administrateur</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-left disabled" id="slide-left">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"/>
+                </svg>
+            </div>
+            <ul class="side-menu ">
+                <li class="slide">
+                    <a class="side-menu__item" data-bs-toggle="slide" href="{% url 'reco_gest:dashboard_recette' %}"><i class="side-menu__icon bx bx-home-alt"></i><span class="side-menu__label">Tableau de bord</span></a>
+                </li>
+                <li class="slide">
+                    <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0);"><i
+                            class="side-menu__icon bx bx-box"></i><span class="side-menu__label">Utilisateurs</span><i
+                            class="angle fe fe-chevron-down"></i></a>
+                    <ul class="slide-menu">
+                        <li class="panel sidetab-menu">
+                            <div class="tab-menu-heading p-0 pb-2 border-0">
+                                <div class="tabs-menu ">
+                                    <!-- Tabs -->
+                                    <ul class="nav panel-tabs">
+                                        <li><a href="#side21" class="active" data-bs-toggle="tab"><i
+                                                class="fe fe-airplay"></i>
+                                            <p>Home</p></a></li>
+                                        <li><a href="#side22" data-bs-toggle="tab"><i class="fe fe-package"></i>
+                                            <p>Events</p></a></li>
+                                        <li><a href="#side23" data-bs-toggle="tab"><i class="fe fe-move"></i>
+                                            <p>Activity</p></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="panel-body tabs-menu-body p-0 border-0">
+                                <div class="tab-content">
+                                    <div class="tab-pane tab-content-show active" id="side21">
+                                        <ul class="sidemenu-list">
+                                            <li class="side-menu__label1"><a href="javascript:void(0);">Gestion des utilisateurs</a>
+                                            </li>
+                                            <li><a class="slide-item" href="{% url 'reco_gest:creer_user' %}">Ajouter un utilisateur</a></li>
+                                            <li><a class="slide-item" href="{% url 'reco_gest:liste_utilisateurs' %}">Liste des utlisateurs</a></li>
+                                        </ul>
+                                        <div class="menutabs-contentlist">
+                                            <h6 class="mt-3 mb-2">Account</h6>
+                                            <ul class="side-account">
+                                                <li class="acc-link">
+                                                    <a href="#"><i class="fe fe-download text-success me-2 fs-20"></i>
+                                                        Downloads</a>
+                                                </li>
+                                                <li class="acc-link">
+                                                    <a href="#"><i
+                                                            class="fe fe-folder-plus text-secondary me-2 fs-20"></i>
+                                                        Archive</a>
+                                                </li>
+                                                <li class="acc-link">
+                                                    <a href="#"><i class="fe fe-rss text-danger me-2 fs-20"></i> Feed
+                                                        Manager</a>
+                                                </li>
+                                                <li class="acc-link">
+                                                    <a href="#"><i class="fe fe-settings text-warning me-2 fs-20"></i>
+                                                        Settings</a>
+                                                </li>
+                                            </ul>
+                                            <h6 class="my-3"> Contacts</h6>
+                                            <div class="d-flex ms-2  mb-2">
+                                                <div class="main-img-user">
+                                                    <img alt="avatar" class="rounded-circle"
+                                                         src="{% static 'assets/img/users/14.jpg'%}">
+                                                </div>
+                                                <div class="ms-2">
+                                                    <span class="tx-14 font-weight-semibold">Maureen Biologist</span>
+                                                    <p class="text-muted tx-12">+0987654321</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex ms-2  mb-2">
+                                                <div class="main-img-user">
+                                                    <img alt="avatar" class="rounded-circle"
+                                                         src="{% static 'assets/img/users/2.jpg'%}">
+                                                </div>
+                                                <div class="ms-2">
+                                                    <span class="tx-14 font-weight-semibold">Paddy O'Furniture</span>
+                                                    <p class="text-muted tx-12">+0987654321</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex ms-2  mb-2">
+                                                <div class="main-img-user">
+                                                    <img alt="avatar" class="rounded-circle"
+                                                         src="{% static 'assets/img/users/13.jpg'%}">
+                                                </div>
+                                                <div class="ms-2">
+                                                    <span class="tx-14 font-weight-semibold">Theeri Dactyl</span>
+                                                    <p class="text-muted tx-12">+0987654321</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex ms-2  mb-2">
+                                                <div class="main-img-user">
+                                                    <img alt="avatar" class="rounded-circle"
+                                                         src="{% static 'assets/img/users/1.jpg'%}">
+                                                </div>
+                                                <div class="ms-2">
+                                                    <span class="tx-14 font-weight-semibold">Aelli Grownis</span>
+                                                    <p class="text-muted tx-12">+0987654321</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane  tab-content-double" id="side22">
+                                        <h5 class="mt-3 mb-4 tx-16">Events</h5>
+                                        <ul class="event-timeline">
+                                            <li class="mb-4">
+                                                <h6 class="mb-0">Employees Meeting</h6>
+                                                <small class="text-muted mb-2">20 Feb, 2022</small>
+                                                <p class="text-12"> consectetur adipiscing elit. Quisque semper</p>
+                                            </li>
+                                            <li class="mb-4">
+                                                <h6 class="mb-0">Anniversary Celebration</h6>
+                                                <small class="text-muted mb-2">24 Feb, 2022</small>
+                                                <p class="text-12"> consectetur adipiscing elit. Quisque semper</p>
+                                            </li>
+                                            <li class="mb-4">
+                                                <h6 class="mb-0">Best Employee Announcement</h6>
+                                                <small class="text-muted mb-2">20 Feb, 2022</small>
+                                                <p class="text-12"> consectetur adipiscing elit. Quisque semper</p>
+                                            </li>
+                                            <li class="mb-4">
+                                                <h6 class="mb-0">Weekend trip</h6>
+                                                <small class="text-muted mb-2">20 Feb, 2022</small>
+                                                <p class="text-12"> consectetur adipiscing elit. Quisque semper</p>
+                                            </li>
+                                            <li class="mb-4">
+                                                <h6 class="mb-0">New Project Started..</h6>
+                                                <small class="text-muted mb-2">20 Jan, 2022</small>
+                                                <p class="text-12"> consectetur adipiscing elit. Quisque semper</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-pane  tab-content-double" id="side23">
+                                        <h5 class="mt-3 mb-4 tx-16">Activity</h5>
+                                        <div class="activity mt-3 p-0">
+                                            <img src="{% static 'assets/img/users/1.jpg'%}" alt="" class="img-activity">
+                                            <div class="time-activity">
+                                                <div class="item-activity">
+                                                    <p class="mb-0 tx-13"><b>Samantha Melon</b> Add a new projects <b>
+                                                        AngularJS Template</b></p>
+                                                    <small class="text-muted ">30 mins ago</small>
+                                                </div>
+                                            </div>
+                                            <img src="{% static 'assets/img/users/9.jpg'%}" alt="" class="img-activity">
+                                            <div class="time-activity">
+                                                <div class="item-activity">
+                                                    <p class="mb-0 tx-13"><b>Allie Grater</b> Add a new projects <b>Free
+                                                        HTML Template</b></p>
+                                                    <small class="text-muted ">1 days ago</small>
+                                                </div>
+                                            </div>
+                                            <img src="{% static 'assets/img/users/8.jpg'%}" alt="" class="img-activity">
+                                            <div class="time-activity">
+                                                <div class="item-activity">
+                                                    <p class="mb-0 tx-13"><b>Gabe Lackmen</b> Add a new projects <b>Free
+                                                        PSD Template</b></p>
+                                                    <small class="text-muted ">3 days ago</small>
+                                                </div>
+                                            </div>
+                                            <img src="{% static 'assets/img/users/2.jpg'%}" alt="" class="img-activity">
+                                            <div class="time-activity">
+                                                <div class="item-activity">
+                                                    <p class="mb-0 tx-13"><b>Abigail John</b> Add a new projects <b>Free
+                                                        UI Template</b></p>
+                                                    <small class="text-muted ">5 days ago</small>
+                                                </div>
+                                            </div>
+                                            <img src="{% static 'assets/img/users/4.jpg'%}" alt="" class="img-activity">
+                                            <div class="time-activity">
+                                                <div class="item-activity">
+                                                    <p class="mb-0 tx-13"><b>Jiggel mossin</b> Add a new projects <b>
+                                                        AngularJS Template</b></p>
+                                                    <small class="text-muted ">30 mins ago</small>
+                                                </div>
+                                            </div>
+                                            <img src="{% static 'assets/img/users/3.jpg'%}" alt="" class="img-activity">
+                                            <div class="time-activity">
+                                                <div class="item-activity">
+                                                    <p class="mb-0 tx-13"><b>Raven Chanan</b> Add a new projects <b>Free
+                                                        HTML Template</b></p>
+                                                    <small class="text-muted ">1 days ago</small>
+                                                </div>
+                                            </div>
+                                            <img src="{% static 'assets/img/users/6.jpg'%}" alt="" class="img-activity">
+                                            <div class="time-activity">
+                                                <div class="item-activity">
+                                                    <p class="mb-0 tx-13"><b>Anna Ogden</b> Add a new projects <b>Free
+                                                        PSD Template</b></p>
+                                                    <small class="text-muted ">3 days ago</small>
+                                                </div>
+                                            </div>
+                                            <img src="{% static 'assets/img/users/5.jpg'%}" alt="" class="img-activity">
+                                            <div class="time-activity">
+                                                <div class="item-activity">
+                                                    <p class="mb-0 tx-13"><b>Allie Grater</b> Add a new projects <b>Free
+                                                        UI Template</b></p>
+                                                    <small class="text-muted ">5 days ago</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="slide">
+                    <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0);"><i
+                            class="side-menu__icon bx bx-package"></i><span class="side-menu__label">Provinces & villes</span><i
+                            class="angle fe fe-chevron-down"></i></a>
+                    <ul class="slide-menu">
+                        <li class="panel sidetab-menu">
+                            <div class="panel-body tabs-menu-body p-0 border-0">
+                                <div class="tab-content">
+                                    <div class="tab-pane tab-content-show active" id="side31">
+                                        <ul class="sidemenu-list">
+                                            <li><a class="slide-item" href="{% url 'reco_gest:provinces' %}">Provinces</a></li>
+                                            <li><a class="slide-item" href="{% url 'reco_gest:villes' %}">Villes</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </aside>
+</div>
